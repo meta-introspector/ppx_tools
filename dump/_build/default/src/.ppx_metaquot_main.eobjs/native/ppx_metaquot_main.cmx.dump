@@ -1,0 +1,53 @@
+[
+  structure_item (src/ppx_metaquot_main.ml[1,0+0]..[1,0+34])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/ppx_metaquot_main.ml[1,0+4]..[1,0+6])
+          Ppat_construct "()" (src/ppx_metaquot_main.ml[1,0+4]..[1,0+6])
+          None
+        expression (src/ppx_metaquot_main.ml[1,0+9]..[1,0+34])
+          Pexp_apply
+          expression (src/ppx_metaquot_main.ml[1,0+9]..[1,0+31])
+            Pexp_ident "Ppx_metaquot.Main.main" (src/ppx_metaquot_main.ml[1,0+9]..[1,0+31])
+          [
+            <arg>
+            Nolabel
+              expression (src/ppx_metaquot_main.ml[1,0+32]..[1,0+34])
+                Pexp_construct "()" (src/ppx_metaquot_main.ml[1,0+32]..[1,0+34])
+                None
+          ]
+    ]
+]
+
+let () = Ppx_metaquot.Main.main ()
+[
+  structure_item (src/ppx_metaquot_main.ml[1,0+0]..src/ppx_metaquot_main.ml[1,0+34])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/ppx_metaquot_main.ml[1,0+4]..src/ppx_metaquot_main.ml[1,0+6])
+          Tpat_construct "()"
+          []
+        expression (src/ppx_metaquot_main.ml[1,0+9]..src/ppx_metaquot_main.ml[1,0+34])
+          Texp_apply
+          expression (src/ppx_metaquot_main.ml[1,0+9]..src/ppx_metaquot_main.ml[1,0+31])
+            Texp_ident "Ppx_metaquot!.Main.main"
+          [
+            <arg>
+              Nolabel
+              expression (src/ppx_metaquot_main.ml[1,0+32]..src/ppx_metaquot_main.ml[1,0+34])
+                Texp_construct "()"
+                []
+          ]
+    ]
+]
+
+(seq
+  (let (*match*/230 = (apply (field 0 (field 0 (global Ppx_metaquot!))) 0a))
+    0a)
+  0a)
+(seq
+  (let (*match*/230 = (apply (field 0 (field 0 (global Ppx_metaquot!))) 0a))
+    0a)
+  0a)

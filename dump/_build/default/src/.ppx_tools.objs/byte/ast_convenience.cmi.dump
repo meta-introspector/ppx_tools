@@ -1,0 +1,2897 @@
+[
+  signature_item (src/ast_convenience.mli[5,235+0]..[5,235+77])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[5,235+0]..[5,235+77])
+        Pstr_eval
+        expression (src/ast_convenience.mli[5,235+0]..[5,235+77])
+          Pexp_constant PConst_string(" {1 Convenience functions to help build and deconstruct AST fragments.} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[7,314+0]..[7,314+13])
+    Psig_open Fresh "Asttypes" (src/ast_convenience.mli[7,314+5]..[7,314+13])
+  signature_item (src/ast_convenience.mli[8,328+0]..[8,328+15])
+    Psig_open Fresh "Ast_helper" (src/ast_convenience.mli[8,328+5]..[8,328+15])
+  signature_item (src/ast_convenience.mli[9,344+0]..[9,344+14])
+    Psig_open Fresh "Parsetree" (src/ast_convenience.mli[9,344+5]..[9,344+14])
+  signature_item (src/ast_convenience.mli[11,360+0]..[11,360+32])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[11,360+0]..[11,360+32])
+        Pstr_eval
+        expression (src/ast_convenience.mli[11,360+0]..[11,360+32])
+          Pexp_constant PConst_string(" {2 Compatibility modules} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[13,394+0]..[27,648+3])
+    Psig_module "Label" (src/ast_convenience.mli[13,394+7]..[13,394+12])
+    module_type (src/ast_convenience.mli[13,394+15]..[27,648+3])
+      Pmty_signature
+      [
+        signature_item (src/ast_convenience.mli[14,413+2]..[14,413+29])
+          Psig_type Rec
+          [
+            type_declaration "t" (src/ast_convenience.mli[14,413+7]..[14,413+8]) (src/ast_convenience.mli[14,413+2]..[14,413+29])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[14,413+11]..[14,413+29])
+                    Ptyp_constr "Asttypes.arg_label" (src/ast_convenience.mli[14,413+11]..[14,413+29])
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[16,444+2]..[19,518+24])
+          Psig_type Rec
+          [
+            type_declaration "desc" (src/ast_convenience.mli[16,444+7]..[16,444+11]) (src/ast_convenience.mli[16,444+2]..[19,518+24])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_variant
+                  [
+                    (src/ast_convenience.mli[17,479+6]..[17,479+13])
+                      "Nolabel" (src/ast_convenience.mli[17,479+6]..[17,479+13])
+                      []
+                      None
+                    (src/ast_convenience.mli[18,493+4]..[18,493+24])
+                      "Labelled" (src/ast_convenience.mli[18,493+6]..[18,493+14])
+                      [
+                        core_type (src/ast_convenience.mli[18,493+18]..[18,493+24])
+                          Ptyp_constr "string" (src/ast_convenience.mli[18,493+18]..[18,493+24])
+                          []
+                      ]
+                      None
+                    (src/ast_convenience.mli[19,518+4]..[19,518+24])
+                      "Optional" (src/ast_convenience.mli[19,518+6]..[19,518+14])
+                      [
+                        core_type (src/ast_convenience.mli[19,518+18]..[19,518+24])
+                          Ptyp_constr "string" (src/ast_convenience.mli[19,518+18]..[19,518+24])
+                          []
+                      ]
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[16,444+14]..[16,444+32])
+                    Ptyp_constr "Asttypes.arg_label" (src/ast_convenience.mli[16,444+14]..[16,444+32])
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[21,544+2]..[21,544+25])
+          Psig_value
+          value_description "explode" (src/ast_convenience.mli[21,544+6]..[21,544+13]) (src/ast_convenience.mli[21,544+2]..[21,544+25])
+            core_type (src/ast_convenience.mli[21,544+16]..[21,544+25])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[21,544+16]..[21,544+17])
+                Ptyp_constr "t" (src/ast_convenience.mli[21,544+16]..[21,544+17])
+                []
+              core_type (src/ast_convenience.mli[21,544+21]..[21,544+25])
+                Ptyp_constr "desc" (src/ast_convenience.mli[21,544+21]..[21,544+25])
+                []
+            []
+        signature_item (src/ast_convenience.mli[23,571+2]..[23,571+17])
+          Psig_value
+          value_description "nolabel" (src/ast_convenience.mli[23,571+6]..[23,571+13]) (src/ast_convenience.mli[23,571+2]..[23,571+17])
+            core_type (src/ast_convenience.mli[23,571+16]..[23,571+17])
+              Ptyp_constr "t" (src/ast_convenience.mli[23,571+16]..[23,571+17])
+              []
+            []
+        signature_item (src/ast_convenience.mli[24,589+2]..[24,589+28])
+          Psig_value
+          value_description "labelled" (src/ast_convenience.mli[24,589+6]..[24,589+14]) (src/ast_convenience.mli[24,589+2]..[24,589+28])
+            core_type (src/ast_convenience.mli[24,589+17]..[24,589+28])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[24,589+17]..[24,589+23])
+                Ptyp_constr "string" (src/ast_convenience.mli[24,589+17]..[24,589+23])
+                []
+              core_type (src/ast_convenience.mli[24,589+27]..[24,589+28])
+                Ptyp_constr "t" (src/ast_convenience.mli[24,589+27]..[24,589+28])
+                []
+            []
+        signature_item (src/ast_convenience.mli[25,618+2]..[25,618+28])
+          Psig_value
+          value_description "optional" (src/ast_convenience.mli[25,618+6]..[25,618+14]) (src/ast_convenience.mli[25,618+2]..[25,618+28])
+            core_type (src/ast_convenience.mli[25,618+17]..[25,618+28])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[25,618+17]..[25,618+23])
+                Ptyp_constr "string" (src/ast_convenience.mli[25,618+17]..[25,618+23])
+                []
+              core_type (src/ast_convenience.mli[25,618+27]..[25,618+28])
+                Ptyp_constr "t" (src/ast_convenience.mli[25,618+27]..[25,618+28])
+                []
+            []
+      ]
+  signature_item (src/ast_convenience.mli[31,809+0]..[48,1284+3])
+    Psig_module "Constant" (src/ast_convenience.mli[31,809+7]..[31,809+15])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_convenience.mli[29,653+0]..[30,753+55])
+            Pstr_eval
+            expression (src/ast_convenience.mli[29,653+0]..[30,753+55])
+              Pexp_constant PConst_string(" {2 Provides a unified abstraction over differences in Parsetree.constant and Asttypes.constant \n * types defined in ocaml 4.03 and 4.02 respectively}",None)
+        ]
+    module_type (src/ast_convenience.mli[31,809+18]..[48,1284+3])
+      Pmty_signature
+      [
+        signature_item (src/ast_convenience.mli[32,832+2]..[40,1050+41])
+          Psig_type Rec
+          [
+            type_declaration "t" (src/ast_convenience.mli[32,832+7]..[32,832+8]) (src/ast_convenience.mli[32,832+2]..[40,1050+41])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_variant
+                  [
+                    (src/ast_convenience.mli[33,864+5]..[33,864+43])
+                      "Pconst_integer" (src/ast_convenience.mli[33,864+5]..[33,864+19])
+                      [
+                        core_type (src/ast_convenience.mli[33,864+23]..[33,864+29])
+                          Ptyp_constr "string" (src/ast_convenience.mli[33,864+23]..[33,864+29])
+                          []
+                        core_type (src/ast_convenience.mli[33,864+32]..[33,864+43])
+                          Ptyp_constr "option" (src/ast_convenience.mli[33,864+37]..[33,864+43])
+                          [
+                            core_type (src/ast_convenience.mli[33,864+32]..[33,864+36])
+                              Ptyp_constr "char" (src/ast_convenience.mli[33,864+32]..[33,864+36])
+                              []
+                          ]
+                      ]
+                      None
+                    (src/ast_convenience.mli[34,909+3]..[34,909+24])
+                      "Pconst_char" (src/ast_convenience.mli[34,909+5]..[34,909+16])
+                      [
+                        core_type (src/ast_convenience.mli[34,909+20]..[34,909+24])
+                          Ptyp_constr "char" (src/ast_convenience.mli[34,909+20]..[34,909+24])
+                          []
+                      ]
+                      None
+                    (src/ast_convenience.mli[38,970+3]..[38,970+44])
+                      "Pconst_string" (src/ast_convenience.mli[38,970+5]..[38,970+18])
+                      [
+                        core_type (src/ast_convenience.mli[38,970+22]..[38,970+28])
+                          Ptyp_constr "string" (src/ast_convenience.mli[38,970+22]..[38,970+28])
+                          []
+                        core_type (src/ast_convenience.mli[38,970+31]..[38,970+44])
+                          Ptyp_constr "option" (src/ast_convenience.mli[38,970+38]..[38,970+44])
+                          [
+                            core_type (src/ast_convenience.mli[38,970+31]..[38,970+37])
+                              Ptyp_constr "string" (src/ast_convenience.mli[38,970+31]..[38,970+37])
+                              []
+                          ]
+                      ]
+                      None
+                    (src/ast_convenience.mli[40,1050+3]..[40,1050+41])
+                      "Pconst_float" (src/ast_convenience.mli[40,1050+5]..[40,1050+17])
+                      [
+                        core_type (src/ast_convenience.mli[40,1050+21]..[40,1050+27])
+                          Ptyp_constr "string" (src/ast_convenience.mli[40,1050+21]..[40,1050+27])
+                          []
+                        core_type (src/ast_convenience.mli[40,1050+30]..[40,1050+41])
+                          Ptyp_constr "option" (src/ast_convenience.mli[40,1050+35]..[40,1050+41])
+                          [
+                            core_type (src/ast_convenience.mli[40,1050+30]..[40,1050+34])
+                              Ptyp_constr "char" (src/ast_convenience.mli[40,1050+30]..[40,1050+34])
+                              []
+                          ]
+                      ]
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[32,832+11]..[32,832+29])
+                    Ptyp_constr "Parsetree.constant" (src/ast_convenience.mli[32,832+11]..[32,832+29])
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[43,1145+2]..[43,1145+43])
+          Psig_value
+          value_description "of_constant" (src/ast_convenience.mli[43,1145+6]..[43,1145+17]) (src/ast_convenience.mli[43,1145+2]..[43,1145+43])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/ast_convenience.mli[42,1095+2]..[42,1095+48])
+                  Pstr_eval
+                  expression (src/ast_convenience.mli[42,1095+2]..[42,1095+48])
+                    Pexp_constant PConst_string(" Convert Asttypes.constant to Constant.t ",None)
+              ]
+            core_type (src/ast_convenience.mli[43,1145+20]..[43,1145+43])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[43,1145+20]..[43,1145+38])
+                Ptyp_constr "Parsetree.constant" (src/ast_convenience.mli[43,1145+20]..[43,1145+38])
+                []
+              core_type (src/ast_convenience.mli[43,1145+42]..[43,1145+43])
+                Ptyp_constr "t" (src/ast_convenience.mli[43,1145+42]..[43,1145+43])
+                []
+            []
+        signature_item (src/ast_convenience.mli[46,1239+2]..[46,1239+43])
+          Psig_value
+          value_description "to_constant" (src/ast_convenience.mli[46,1239+6]..[46,1239+17]) (src/ast_convenience.mli[46,1239+2]..[46,1239+43])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/ast_convenience.mli[45,1190+2]..[45,1190+48])
+                  Pstr_eval
+                  expression (src/ast_convenience.mli[45,1190+2]..[45,1190+48])
+                    Pexp_constant PConst_string(" Convert Constant.t to Asttypes.constant ",None)
+              ]
+            core_type (src/ast_convenience.mli[46,1239+20]..[46,1239+43])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[46,1239+20]..[46,1239+21])
+                Ptyp_constr "t" (src/ast_convenience.mli[46,1239+20]..[46,1239+21])
+                []
+              core_type (src/ast_convenience.mli[46,1239+25]..[46,1239+43])
+                Ptyp_constr "Parsetree.constant" (src/ast_convenience.mli[46,1239+25]..[46,1239+43])
+                []
+            []
+      ]
+  signature_item (src/ast_convenience.mli[50,1289+0]..[50,1289+15])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[50,1289+0]..[50,1289+15])
+        Pstr_eval
+        expression (src/ast_convenience.mli[50,1289+0]..[50,1289+15])
+          Pexp_constant PConst_string(" {2 Misc} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[52,1306+0]..[52,1306+34])
+    Psig_value
+    value_description "lid" (src/ast_convenience.mli[52,1306+4]..[52,1306+7]) (src/ast_convenience.mli[52,1306+0]..[52,1306+34])
+      core_type (src/ast_convenience.mli[52,1306+9]..[52,1306+34])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[52,1306+14]..[52,1306+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[52,1306+14]..[52,1306+17])
+          []
+        core_type (src/ast_convenience.mli[52,1306+21]..[52,1306+34])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[52,1306+21]..[52,1306+27])
+            Ptyp_constr "string" (src/ast_convenience.mli[52,1306+21]..[52,1306+27])
+            []
+          core_type (src/ast_convenience.mli[52,1306+31]..[52,1306+34])
+            Ptyp_constr "lid" (src/ast_convenience.mli[52,1306+31]..[52,1306+34])
+            []
+      []
+  signature_item (src/ast_convenience.mli[54,1342+0]..[54,1342+22])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[54,1342+0]..[54,1342+22])
+        Pstr_eval
+        expression (src/ast_convenience.mli[54,1342+0]..[54,1342+22])
+          Pexp_constant PConst_string(" {2 Expressions} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[56,1366+0]..[56,1366+58])
+    Psig_value
+    value_description "evar" (src/ast_convenience.mli[56,1366+4]..[56,1366+8]) (src/ast_convenience.mli[56,1366+0]..[56,1366+58])
+      core_type (src/ast_convenience.mli[56,1366+10]..[56,1366+58])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[56,1366+15]..[56,1366+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[56,1366+15]..[56,1366+18])
+          []
+        core_type (src/ast_convenience.mli[56,1366+22]..[56,1366+58])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[56,1366+29]..[56,1366+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[56,1366+29]..[56,1366+34])
+            []
+          core_type (src/ast_convenience.mli[56,1366+38]..[56,1366+58])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[56,1366+38]..[56,1366+44])
+              Ptyp_constr "string" (src/ast_convenience.mli[56,1366+38]..[56,1366+44])
+              []
+            core_type (src/ast_convenience.mli[56,1366+48]..[56,1366+58])
+              Ptyp_constr "expression" (src/ast_convenience.mli[56,1366+48]..[56,1366+58])
+              []
+      []
+  signature_item (src/ast_convenience.mli[57,1425+0]..[57,1425+105])
+    Psig_value
+    value_description "let_in" (src/ast_convenience.mli[57,1425+4]..[57,1425+10]) (src/ast_convenience.mli[57,1425+0]..[57,1425+105])
+      core_type (src/ast_convenience.mli[57,1425+12]..[57,1425+105])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[57,1425+17]..[57,1425+20])
+          Ptyp_constr "loc" (src/ast_convenience.mli[57,1425+17]..[57,1425+20])
+          []
+        core_type (src/ast_convenience.mli[57,1425+24]..[57,1425+105])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[57,1425+31]..[57,1425+36])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[57,1425+31]..[57,1425+36])
+            []
+          core_type (src/ast_convenience.mli[57,1425+40]..[57,1425+105])
+            Ptyp_arrow
+            Optional "recursive"
+            core_type (src/ast_convenience.mli[57,1425+51]..[57,1425+55])
+              Ptyp_constr "bool" (src/ast_convenience.mli[57,1425+51]..[57,1425+55])
+              []
+            core_type (src/ast_convenience.mli[57,1425+59]..[57,1425+105])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[57,1425+59]..[57,1425+77])
+                Ptyp_constr "list" (src/ast_convenience.mli[57,1425+73]..[57,1425+77])
+                [
+                  core_type (src/ast_convenience.mli[57,1425+59]..[57,1425+72])
+                    Ptyp_constr "value_binding" (src/ast_convenience.mli[57,1425+59]..[57,1425+72])
+                    []
+                ]
+              core_type (src/ast_convenience.mli[57,1425+81]..[57,1425+105])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/ast_convenience.mli[57,1425+81]..[57,1425+91])
+                  Ptyp_constr "expression" (src/ast_convenience.mli[57,1425+81]..[57,1425+91])
+                  []
+                core_type (src/ast_convenience.mli[57,1425+95]..[57,1425+105])
+                  Ptyp_constr "expression" (src/ast_convenience.mli[57,1425+95]..[57,1425+105])
+                  []
+      []
+  signature_item (src/ast_convenience.mli[59,1532+0]..[59,1532+79])
+    Psig_value
+    value_description "constr" (src/ast_convenience.mli[59,1532+4]..[59,1532+10]) (src/ast_convenience.mli[59,1532+0]..[59,1532+79])
+      core_type (src/ast_convenience.mli[59,1532+12]..[59,1532+79])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[59,1532+17]..[59,1532+20])
+          Ptyp_constr "loc" (src/ast_convenience.mli[59,1532+17]..[59,1532+20])
+          []
+        core_type (src/ast_convenience.mli[59,1532+24]..[59,1532+79])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[59,1532+31]..[59,1532+36])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[59,1532+31]..[59,1532+36])
+            []
+          core_type (src/ast_convenience.mli[59,1532+40]..[59,1532+79])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[59,1532+40]..[59,1532+46])
+              Ptyp_constr "string" (src/ast_convenience.mli[59,1532+40]..[59,1532+46])
+              []
+            core_type (src/ast_convenience.mli[59,1532+50]..[59,1532+79])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[59,1532+50]..[59,1532+65])
+                Ptyp_constr "list" (src/ast_convenience.mli[59,1532+61]..[59,1532+65])
+                [
+                  core_type (src/ast_convenience.mli[59,1532+50]..[59,1532+60])
+                    Ptyp_constr "expression" (src/ast_convenience.mli[59,1532+50]..[59,1532+60])
+                    []
+                ]
+              core_type (src/ast_convenience.mli[59,1532+69]..[59,1532+79])
+                Ptyp_constr "expression" (src/ast_convenience.mli[59,1532+69]..[59,1532+79])
+                []
+      []
+  signature_item (src/ast_convenience.mli[60,1612+0]..[60,1612+100])
+    Psig_value
+    value_description "record" (src/ast_convenience.mli[60,1612+4]..[60,1612+10]) (src/ast_convenience.mli[60,1612+0]..[60,1612+100])
+      core_type (src/ast_convenience.mli[60,1612+12]..[60,1612+100])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[60,1612+17]..[60,1612+20])
+          Ptyp_constr "loc" (src/ast_convenience.mli[60,1612+17]..[60,1612+20])
+          []
+        core_type (src/ast_convenience.mli[60,1612+24]..[60,1612+100])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[60,1612+31]..[60,1612+36])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[60,1612+31]..[60,1612+36])
+            []
+          core_type (src/ast_convenience.mli[60,1612+40]..[60,1612+100])
+            Ptyp_arrow
+            Optional "over"
+            core_type (src/ast_convenience.mli[60,1612+46]..[60,1612+56])
+              Ptyp_constr "expression" (src/ast_convenience.mli[60,1612+46]..[60,1612+56])
+              []
+            core_type (src/ast_convenience.mli[60,1612+60]..[60,1612+100])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[60,1612+60]..[60,1612+86])
+                Ptyp_constr "list" (src/ast_convenience.mli[60,1612+82]..[60,1612+86])
+                [
+                  core_type (src/ast_convenience.mli[60,1612+61]..[60,1612+80])
+                    Ptyp_tuple
+                    [
+                      core_type (src/ast_convenience.mli[60,1612+61]..[60,1612+67])
+                        Ptyp_constr "string" (src/ast_convenience.mli[60,1612+61]..[60,1612+67])
+                        []
+                      core_type (src/ast_convenience.mli[60,1612+70]..[60,1612+80])
+                        Ptyp_constr "expression" (src/ast_convenience.mli[60,1612+70]..[60,1612+80])
+                        []
+                    ]
+                ]
+              core_type (src/ast_convenience.mli[60,1612+90]..[60,1612+100])
+                Ptyp_constr "expression" (src/ast_convenience.mli[60,1612+90]..[60,1612+100])
+                []
+      []
+  signature_item (src/ast_convenience.mli[61,1713+0]..[61,1713+68])
+    Psig_value
+    value_description "tuple" (src/ast_convenience.mli[61,1713+4]..[61,1713+9]) (src/ast_convenience.mli[61,1713+0]..[61,1713+68])
+      core_type (src/ast_convenience.mli[61,1713+11]..[61,1713+68])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[61,1713+16]..[61,1713+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[61,1713+16]..[61,1713+19])
+          []
+        core_type (src/ast_convenience.mli[61,1713+23]..[61,1713+68])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[61,1713+30]..[61,1713+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[61,1713+30]..[61,1713+35])
+            []
+          core_type (src/ast_convenience.mli[61,1713+39]..[61,1713+68])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[61,1713+39]..[61,1713+54])
+              Ptyp_constr "list" (src/ast_convenience.mli[61,1713+50]..[61,1713+54])
+              [
+                core_type (src/ast_convenience.mli[61,1713+39]..[61,1713+49])
+                  Ptyp_constr "expression" (src/ast_convenience.mli[61,1713+39]..[61,1713+49])
+                  []
+              ]
+            core_type (src/ast_convenience.mli[61,1713+58]..[61,1713+68])
+              Ptyp_constr "expression" (src/ast_convenience.mli[61,1713+58]..[61,1713+68])
+              []
+      []
+  signature_item (src/ast_convenience.mli[63,1783+0]..[63,1783+55])
+    Psig_value
+    value_description "nil" (src/ast_convenience.mli[63,1783+4]..[63,1783+7]) (src/ast_convenience.mli[63,1783+0]..[63,1783+55])
+      core_type (src/ast_convenience.mli[63,1783+9]..[63,1783+55])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[63,1783+14]..[63,1783+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[63,1783+14]..[63,1783+17])
+          []
+        core_type (src/ast_convenience.mli[63,1783+21]..[63,1783+55])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[63,1783+28]..[63,1783+33])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[63,1783+28]..[63,1783+33])
+            []
+          core_type (src/ast_convenience.mli[63,1783+37]..[63,1783+55])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[63,1783+37]..[63,1783+41])
+              Ptyp_constr "unit" (src/ast_convenience.mli[63,1783+37]..[63,1783+41])
+              []
+            core_type (src/ast_convenience.mli[63,1783+45]..[63,1783+55])
+              Ptyp_constr "expression" (src/ast_convenience.mli[63,1783+45]..[63,1783+55])
+              []
+      []
+  signature_item (src/ast_convenience.mli[64,1839+0]..[64,1839+76])
+    Psig_value
+    value_description "cons" (src/ast_convenience.mli[64,1839+4]..[64,1839+8]) (src/ast_convenience.mli[64,1839+0]..[64,1839+76])
+      core_type (src/ast_convenience.mli[64,1839+10]..[64,1839+76])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[64,1839+15]..[64,1839+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[64,1839+15]..[64,1839+18])
+          []
+        core_type (src/ast_convenience.mli[64,1839+22]..[64,1839+76])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[64,1839+29]..[64,1839+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[64,1839+29]..[64,1839+34])
+            []
+          core_type (src/ast_convenience.mli[64,1839+38]..[64,1839+76])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[64,1839+38]..[64,1839+48])
+              Ptyp_constr "expression" (src/ast_convenience.mli[64,1839+38]..[64,1839+48])
+              []
+            core_type (src/ast_convenience.mli[64,1839+52]..[64,1839+76])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[64,1839+52]..[64,1839+62])
+                Ptyp_constr "expression" (src/ast_convenience.mli[64,1839+52]..[64,1839+62])
+                []
+              core_type (src/ast_convenience.mli[64,1839+66]..[64,1839+76])
+                Ptyp_constr "expression" (src/ast_convenience.mli[64,1839+66]..[64,1839+76])
+                []
+      []
+  signature_item (src/ast_convenience.mli[65,1916+0]..[65,1916+67])
+    Psig_value
+    value_description "list" (src/ast_convenience.mli[65,1916+4]..[65,1916+8]) (src/ast_convenience.mli[65,1916+0]..[65,1916+67])
+      core_type (src/ast_convenience.mli[65,1916+10]..[65,1916+67])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[65,1916+15]..[65,1916+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[65,1916+15]..[65,1916+18])
+          []
+        core_type (src/ast_convenience.mli[65,1916+22]..[65,1916+67])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[65,1916+29]..[65,1916+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[65,1916+29]..[65,1916+34])
+            []
+          core_type (src/ast_convenience.mli[65,1916+38]..[65,1916+67])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[65,1916+38]..[65,1916+53])
+              Ptyp_constr "list" (src/ast_convenience.mli[65,1916+49]..[65,1916+53])
+              [
+                core_type (src/ast_convenience.mli[65,1916+38]..[65,1916+48])
+                  Ptyp_constr "expression" (src/ast_convenience.mli[65,1916+38]..[65,1916+48])
+                  []
+              ]
+            core_type (src/ast_convenience.mli[65,1916+57]..[65,1916+67])
+              Ptyp_constr "expression" (src/ast_convenience.mli[65,1916+57]..[65,1916+67])
+              []
+      []
+  signature_item (src/ast_convenience.mli[67,1985+0]..[67,1985+56])
+    Psig_value
+    value_description "unit" (src/ast_convenience.mli[67,1985+4]..[67,1985+8]) (src/ast_convenience.mli[67,1985+0]..[67,1985+56])
+      core_type (src/ast_convenience.mli[67,1985+10]..[67,1985+56])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[67,1985+15]..[67,1985+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[67,1985+15]..[67,1985+18])
+          []
+        core_type (src/ast_convenience.mli[67,1985+22]..[67,1985+56])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[67,1985+29]..[67,1985+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[67,1985+29]..[67,1985+34])
+            []
+          core_type (src/ast_convenience.mli[67,1985+38]..[67,1985+56])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[67,1985+38]..[67,1985+42])
+              Ptyp_constr "unit" (src/ast_convenience.mli[67,1985+38]..[67,1985+42])
+              []
+            core_type (src/ast_convenience.mli[67,1985+46]..[67,1985+56])
+              Ptyp_constr "expression" (src/ast_convenience.mli[67,1985+46]..[67,1985+56])
+              []
+      []
+  signature_item (src/ast_convenience.mli[69,2043+0]..[69,2043+79])
+    Psig_value
+    value_description "func" (src/ast_convenience.mli[69,2043+4]..[69,2043+8]) (src/ast_convenience.mli[69,2043+0]..[69,2043+79])
+      core_type (src/ast_convenience.mli[69,2043+10]..[69,2043+79])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[69,2043+15]..[69,2043+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[69,2043+15]..[69,2043+18])
+          []
+        core_type (src/ast_convenience.mli[69,2043+22]..[69,2043+79])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[69,2043+29]..[69,2043+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[69,2043+29]..[69,2043+34])
+            []
+          core_type (src/ast_convenience.mli[69,2043+38]..[69,2043+79])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[69,2043+38]..[69,2043+65])
+              Ptyp_constr "list" (src/ast_convenience.mli[69,2043+61]..[69,2043+65])
+              [
+                core_type (src/ast_convenience.mli[69,2043+39]..[69,2043+59])
+                  Ptyp_tuple
+                  [
+                    core_type (src/ast_convenience.mli[69,2043+39]..[69,2043+46])
+                      Ptyp_constr "pattern" (src/ast_convenience.mli[69,2043+39]..[69,2043+46])
+                      []
+                    core_type (src/ast_convenience.mli[69,2043+49]..[69,2043+59])
+                      Ptyp_constr "expression" (src/ast_convenience.mli[69,2043+49]..[69,2043+59])
+                      []
+                  ]
+              ]
+            core_type (src/ast_convenience.mli[69,2043+69]..[69,2043+79])
+              Ptyp_constr "expression" (src/ast_convenience.mli[69,2043+69]..[69,2043+79])
+              []
+      []
+  signature_item (src/ast_convenience.mli[70,2123+0]..[70,2123+113])
+    Psig_value
+    value_description "lam" (src/ast_convenience.mli[70,2123+4]..[70,2123+7]) (src/ast_convenience.mli[70,2123+0]..[70,2123+113])
+      core_type (src/ast_convenience.mli[70,2123+9]..[70,2123+113])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[70,2123+14]..[70,2123+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[70,2123+14]..[70,2123+17])
+          []
+        core_type (src/ast_convenience.mli[70,2123+21]..[70,2123+113])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[70,2123+28]..[70,2123+33])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[70,2123+28]..[70,2123+33])
+            []
+          core_type (src/ast_convenience.mli[70,2123+37]..[70,2123+113])
+            Ptyp_arrow
+            Optional "label"
+            core_type (src/ast_convenience.mli[70,2123+44]..[70,2123+51])
+              Ptyp_constr "Label.t" (src/ast_convenience.mli[70,2123+44]..[70,2123+51])
+              []
+            core_type (src/ast_convenience.mli[70,2123+55]..[70,2123+113])
+              Ptyp_arrow
+              Optional "default"
+              core_type (src/ast_convenience.mli[70,2123+64]..[70,2123+74])
+                Ptyp_constr "expression" (src/ast_convenience.mli[70,2123+64]..[70,2123+74])
+                []
+              core_type (src/ast_convenience.mli[70,2123+78]..[70,2123+113])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/ast_convenience.mli[70,2123+78]..[70,2123+85])
+                  Ptyp_constr "pattern" (src/ast_convenience.mli[70,2123+78]..[70,2123+85])
+                  []
+                core_type (src/ast_convenience.mli[70,2123+89]..[70,2123+113])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/ast_convenience.mli[70,2123+89]..[70,2123+99])
+                    Ptyp_constr "expression" (src/ast_convenience.mli[70,2123+89]..[70,2123+99])
+                    []
+                  core_type (src/ast_convenience.mli[70,2123+103]..[70,2123+113])
+                    Ptyp_constr "expression" (src/ast_convenience.mli[70,2123+103]..[70,2123+113])
+                    []
+      []
+  signature_item (src/ast_convenience.mli[71,2237+0]..[71,2237+80])
+    Psig_value
+    value_description "app" (src/ast_convenience.mli[71,2237+4]..[71,2237+7]) (src/ast_convenience.mli[71,2237+0]..[71,2237+80])
+      core_type (src/ast_convenience.mli[71,2237+9]..[71,2237+80])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[71,2237+14]..[71,2237+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[71,2237+14]..[71,2237+17])
+          []
+        core_type (src/ast_convenience.mli[71,2237+21]..[71,2237+80])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[71,2237+28]..[71,2237+33])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[71,2237+28]..[71,2237+33])
+            []
+          core_type (src/ast_convenience.mli[71,2237+37]..[71,2237+80])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[71,2237+37]..[71,2237+47])
+              Ptyp_constr "expression" (src/ast_convenience.mli[71,2237+37]..[71,2237+47])
+              []
+            core_type (src/ast_convenience.mli[71,2237+51]..[71,2237+80])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[71,2237+51]..[71,2237+66])
+                Ptyp_constr "list" (src/ast_convenience.mli[71,2237+62]..[71,2237+66])
+                [
+                  core_type (src/ast_convenience.mli[71,2237+51]..[71,2237+61])
+                    Ptyp_constr "expression" (src/ast_convenience.mli[71,2237+51]..[71,2237+61])
+                    []
+                ]
+              core_type (src/ast_convenience.mli[71,2237+70]..[71,2237+80])
+                Ptyp_constr "expression" (src/ast_convenience.mli[71,2237+70]..[71,2237+80])
+                []
+      []
+  signature_item (src/ast_convenience.mli[73,2319+0]..[73,2319+57])
+    Psig_value
+    value_description "str" (src/ast_convenience.mli[73,2319+4]..[73,2319+7]) (src/ast_convenience.mli[73,2319+0]..[73,2319+57])
+      core_type (src/ast_convenience.mli[73,2319+9]..[73,2319+57])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[73,2319+14]..[73,2319+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[73,2319+14]..[73,2319+17])
+          []
+        core_type (src/ast_convenience.mli[73,2319+21]..[73,2319+57])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[73,2319+28]..[73,2319+33])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[73,2319+28]..[73,2319+33])
+            []
+          core_type (src/ast_convenience.mli[73,2319+37]..[73,2319+57])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[73,2319+37]..[73,2319+43])
+              Ptyp_constr "string" (src/ast_convenience.mli[73,2319+37]..[73,2319+43])
+              []
+            core_type (src/ast_convenience.mli[73,2319+47]..[73,2319+57])
+              Ptyp_constr "expression" (src/ast_convenience.mli[73,2319+47]..[73,2319+57])
+              []
+      []
+  signature_item (src/ast_convenience.mli[74,2377+0]..[74,2377+54])
+    Psig_value
+    value_description "int" (src/ast_convenience.mli[74,2377+4]..[74,2377+7]) (src/ast_convenience.mli[74,2377+0]..[74,2377+54])
+      core_type (src/ast_convenience.mli[74,2377+9]..[74,2377+54])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[74,2377+14]..[74,2377+17])
+          Ptyp_constr "loc" (src/ast_convenience.mli[74,2377+14]..[74,2377+17])
+          []
+        core_type (src/ast_convenience.mli[74,2377+21]..[74,2377+54])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[74,2377+28]..[74,2377+33])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[74,2377+28]..[74,2377+33])
+            []
+          core_type (src/ast_convenience.mli[74,2377+37]..[74,2377+54])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[74,2377+37]..[74,2377+40])
+              Ptyp_constr "int" (src/ast_convenience.mli[74,2377+37]..[74,2377+40])
+              []
+            core_type (src/ast_convenience.mli[74,2377+44]..[74,2377+54])
+              Ptyp_constr "expression" (src/ast_convenience.mli[74,2377+44]..[74,2377+54])
+              []
+      []
+  signature_item (src/ast_convenience.mli[75,2432+0]..[75,2432+58])
+    Psig_value
+    value_description "int32" (src/ast_convenience.mli[75,2432+4]..[75,2432+9]) (src/ast_convenience.mli[75,2432+0]..[75,2432+58])
+      core_type (src/ast_convenience.mli[75,2432+11]..[75,2432+58])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[75,2432+16]..[75,2432+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[75,2432+16]..[75,2432+19])
+          []
+        core_type (src/ast_convenience.mli[75,2432+23]..[75,2432+58])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[75,2432+30]..[75,2432+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[75,2432+30]..[75,2432+35])
+            []
+          core_type (src/ast_convenience.mli[75,2432+39]..[75,2432+58])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[75,2432+39]..[75,2432+44])
+              Ptyp_constr "int32" (src/ast_convenience.mli[75,2432+39]..[75,2432+44])
+              []
+            core_type (src/ast_convenience.mli[75,2432+48]..[75,2432+58])
+              Ptyp_constr "expression" (src/ast_convenience.mli[75,2432+48]..[75,2432+58])
+              []
+      []
+  signature_item (src/ast_convenience.mli[76,2491+0]..[76,2491+58])
+    Psig_value
+    value_description "int64" (src/ast_convenience.mli[76,2491+4]..[76,2491+9]) (src/ast_convenience.mli[76,2491+0]..[76,2491+58])
+      core_type (src/ast_convenience.mli[76,2491+11]..[76,2491+58])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[76,2491+16]..[76,2491+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[76,2491+16]..[76,2491+19])
+          []
+        core_type (src/ast_convenience.mli[76,2491+23]..[76,2491+58])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[76,2491+30]..[76,2491+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[76,2491+30]..[76,2491+35])
+            []
+          core_type (src/ast_convenience.mli[76,2491+39]..[76,2491+58])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[76,2491+39]..[76,2491+44])
+              Ptyp_constr "int64" (src/ast_convenience.mli[76,2491+39]..[76,2491+44])
+              []
+            core_type (src/ast_convenience.mli[76,2491+48]..[76,2491+58])
+              Ptyp_constr "expression" (src/ast_convenience.mli[76,2491+48]..[76,2491+58])
+              []
+      []
+  signature_item (src/ast_convenience.mli[77,2550+0]..[77,2550+56])
+    Psig_value
+    value_description "char" (src/ast_convenience.mli[77,2550+4]..[77,2550+8]) (src/ast_convenience.mli[77,2550+0]..[77,2550+56])
+      core_type (src/ast_convenience.mli[77,2550+10]..[77,2550+56])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[77,2550+15]..[77,2550+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[77,2550+15]..[77,2550+18])
+          []
+        core_type (src/ast_convenience.mli[77,2550+22]..[77,2550+56])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[77,2550+29]..[77,2550+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[77,2550+29]..[77,2550+34])
+            []
+          core_type (src/ast_convenience.mli[77,2550+38]..[77,2550+56])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[77,2550+38]..[77,2550+42])
+              Ptyp_constr "char" (src/ast_convenience.mli[77,2550+38]..[77,2550+42])
+              []
+            core_type (src/ast_convenience.mli[77,2550+46]..[77,2550+56])
+              Ptyp_constr "expression" (src/ast_convenience.mli[77,2550+46]..[77,2550+56])
+              []
+      []
+  signature_item (src/ast_convenience.mli[78,2607+0]..[78,2607+58])
+    Psig_value
+    value_description "float" (src/ast_convenience.mli[78,2607+4]..[78,2607+9]) (src/ast_convenience.mli[78,2607+0]..[78,2607+58])
+      core_type (src/ast_convenience.mli[78,2607+11]..[78,2607+58])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[78,2607+16]..[78,2607+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[78,2607+16]..[78,2607+19])
+          []
+        core_type (src/ast_convenience.mli[78,2607+23]..[78,2607+58])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[78,2607+30]..[78,2607+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[78,2607+30]..[78,2607+35])
+            []
+          core_type (src/ast_convenience.mli[78,2607+39]..[78,2607+58])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[78,2607+39]..[78,2607+44])
+              Ptyp_constr "float" (src/ast_convenience.mli[78,2607+39]..[78,2607+44])
+              []
+            core_type (src/ast_convenience.mli[78,2607+48]..[78,2607+58])
+              Ptyp_constr "expression" (src/ast_convenience.mli[78,2607+48]..[78,2607+58])
+              []
+      []
+  signature_item (src/ast_convenience.mli[80,2667+0]..[80,2667+71])
+    Psig_value
+    value_description "sequence" (src/ast_convenience.mli[80,2667+4]..[80,2667+12]) (src/ast_convenience.mli[80,2667+0]..[80,2667+71])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_convenience.mli[81,2739+0]..[81,2739+50])
+            Pstr_eval
+            expression (src/ast_convenience.mli[81,2739+0]..[81,2739+50])
+              Pexp_constant PConst_string(" Return [()] if the list is empty. Tail rec. ",None)
+        ]
+      core_type (src/ast_convenience.mli[80,2667+14]..[80,2667+71])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[80,2667+19]..[80,2667+22])
+          Ptyp_constr "loc" (src/ast_convenience.mli[80,2667+19]..[80,2667+22])
+          []
+        core_type (src/ast_convenience.mli[80,2667+26]..[80,2667+71])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[80,2667+33]..[80,2667+38])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[80,2667+33]..[80,2667+38])
+            []
+          core_type (src/ast_convenience.mli[80,2667+42]..[80,2667+71])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[80,2667+42]..[80,2667+57])
+              Ptyp_constr "list" (src/ast_convenience.mli[80,2667+53]..[80,2667+57])
+              [
+                core_type (src/ast_convenience.mli[80,2667+42]..[80,2667+52])
+                  Ptyp_constr "expression" (src/ast_convenience.mli[80,2667+42]..[80,2667+52])
+                  []
+              ]
+            core_type (src/ast_convenience.mli[80,2667+61]..[80,2667+71])
+              Ptyp_constr "expression" (src/ast_convenience.mli[80,2667+61]..[80,2667+71])
+              []
+      []
+  signature_item (src/ast_convenience.mli[83,2791+0]..[83,2791+19])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[83,2791+0]..[83,2791+19])
+        Pstr_eval
+        expression (src/ast_convenience.mli[83,2791+0]..[83,2791+19])
+          Pexp_constant PConst_string(" {2 Patterns} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[85,2812+0]..[85,2812+55])
+    Psig_value
+    value_description "pvar" (src/ast_convenience.mli[85,2812+4]..[85,2812+8]) (src/ast_convenience.mli[85,2812+0]..[85,2812+55])
+      core_type (src/ast_convenience.mli[85,2812+10]..[85,2812+55])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[85,2812+15]..[85,2812+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[85,2812+15]..[85,2812+18])
+          []
+        core_type (src/ast_convenience.mli[85,2812+22]..[85,2812+55])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[85,2812+29]..[85,2812+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[85,2812+29]..[85,2812+34])
+            []
+          core_type (src/ast_convenience.mli[85,2812+38]..[85,2812+55])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[85,2812+38]..[85,2812+44])
+              Ptyp_constr "string" (src/ast_convenience.mli[85,2812+38]..[85,2812+44])
+              []
+            core_type (src/ast_convenience.mli[85,2812+48]..[85,2812+55])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[85,2812+48]..[85,2812+55])
+              []
+      []
+  signature_item (src/ast_convenience.mli[86,2868+0]..[86,2868+74])
+    Psig_value
+    value_description "pconstr" (src/ast_convenience.mli[86,2868+4]..[86,2868+11]) (src/ast_convenience.mli[86,2868+0]..[86,2868+74])
+      core_type (src/ast_convenience.mli[86,2868+13]..[86,2868+74])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[86,2868+18]..[86,2868+21])
+          Ptyp_constr "loc" (src/ast_convenience.mli[86,2868+18]..[86,2868+21])
+          []
+        core_type (src/ast_convenience.mli[86,2868+25]..[86,2868+74])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[86,2868+32]..[86,2868+37])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[86,2868+32]..[86,2868+37])
+            []
+          core_type (src/ast_convenience.mli[86,2868+41]..[86,2868+74])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[86,2868+41]..[86,2868+47])
+              Ptyp_constr "string" (src/ast_convenience.mli[86,2868+41]..[86,2868+47])
+              []
+            core_type (src/ast_convenience.mli[86,2868+51]..[86,2868+74])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[86,2868+51]..[86,2868+63])
+                Ptyp_constr "list" (src/ast_convenience.mli[86,2868+59]..[86,2868+63])
+                [
+                  core_type (src/ast_convenience.mli[86,2868+51]..[86,2868+58])
+                    Ptyp_constr "pattern" (src/ast_convenience.mli[86,2868+51]..[86,2868+58])
+                    []
+                ]
+              core_type (src/ast_convenience.mli[86,2868+67]..[86,2868+74])
+                Ptyp_constr "pattern" (src/ast_convenience.mli[86,2868+67]..[86,2868+74])
+                []
+      []
+  signature_item (src/ast_convenience.mli[87,2943+0]..[87,2943+98])
+    Psig_value
+    value_description "precord" (src/ast_convenience.mli[87,2943+4]..[87,2943+11]) (src/ast_convenience.mli[87,2943+0]..[87,2943+98])
+      core_type (src/ast_convenience.mli[87,2943+13]..[87,2943+98])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[87,2943+18]..[87,2943+21])
+          Ptyp_constr "loc" (src/ast_convenience.mli[87,2943+18]..[87,2943+21])
+          []
+        core_type (src/ast_convenience.mli[87,2943+25]..[87,2943+98])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[87,2943+32]..[87,2943+37])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[87,2943+32]..[87,2943+37])
+            []
+          core_type (src/ast_convenience.mli[87,2943+41]..[87,2943+98])
+            Ptyp_arrow
+            Optional "closed"
+            core_type (src/ast_convenience.mli[87,2943+49]..[87,2943+60])
+              Ptyp_constr "closed_flag" (src/ast_convenience.mli[87,2943+49]..[87,2943+60])
+              []
+            core_type (src/ast_convenience.mli[87,2943+64]..[87,2943+98])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[87,2943+64]..[87,2943+87])
+                Ptyp_constr "list" (src/ast_convenience.mli[87,2943+83]..[87,2943+87])
+                [
+                  core_type (src/ast_convenience.mli[87,2943+65]..[87,2943+81])
+                    Ptyp_tuple
+                    [
+                      core_type (src/ast_convenience.mli[87,2943+65]..[87,2943+71])
+                        Ptyp_constr "string" (src/ast_convenience.mli[87,2943+65]..[87,2943+71])
+                        []
+                      core_type (src/ast_convenience.mli[87,2943+74]..[87,2943+81])
+                        Ptyp_constr "pattern" (src/ast_convenience.mli[87,2943+74]..[87,2943+81])
+                        []
+                    ]
+                ]
+              core_type (src/ast_convenience.mli[87,2943+91]..[87,2943+98])
+                Ptyp_constr "pattern" (src/ast_convenience.mli[87,2943+91]..[87,2943+98])
+                []
+      []
+  signature_item (src/ast_convenience.mli[88,3042+0]..[88,3042+63])
+    Psig_value
+    value_description "ptuple" (src/ast_convenience.mli[88,3042+4]..[88,3042+10]) (src/ast_convenience.mli[88,3042+0]..[88,3042+63])
+      core_type (src/ast_convenience.mli[88,3042+12]..[88,3042+63])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[88,3042+17]..[88,3042+20])
+          Ptyp_constr "loc" (src/ast_convenience.mli[88,3042+17]..[88,3042+20])
+          []
+        core_type (src/ast_convenience.mli[88,3042+24]..[88,3042+63])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[88,3042+31]..[88,3042+36])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[88,3042+31]..[88,3042+36])
+            []
+          core_type (src/ast_convenience.mli[88,3042+40]..[88,3042+63])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[88,3042+40]..[88,3042+52])
+              Ptyp_constr "list" (src/ast_convenience.mli[88,3042+48]..[88,3042+52])
+              [
+                core_type (src/ast_convenience.mli[88,3042+40]..[88,3042+47])
+                  Ptyp_constr "pattern" (src/ast_convenience.mli[88,3042+40]..[88,3042+47])
+                  []
+              ]
+            core_type (src/ast_convenience.mli[88,3042+56]..[88,3042+63])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[88,3042+56]..[88,3042+63])
+              []
+      []
+  signature_item (src/ast_convenience.mli[90,3107+0]..[90,3107+53])
+    Psig_value
+    value_description "pnil" (src/ast_convenience.mli[90,3107+4]..[90,3107+8]) (src/ast_convenience.mli[90,3107+0]..[90,3107+53])
+      core_type (src/ast_convenience.mli[90,3107+10]..[90,3107+53])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[90,3107+15]..[90,3107+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[90,3107+15]..[90,3107+18])
+          []
+        core_type (src/ast_convenience.mli[90,3107+22]..[90,3107+53])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[90,3107+29]..[90,3107+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[90,3107+29]..[90,3107+34])
+            []
+          core_type (src/ast_convenience.mli[90,3107+38]..[90,3107+53])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[90,3107+38]..[90,3107+42])
+              Ptyp_constr "unit" (src/ast_convenience.mli[90,3107+38]..[90,3107+42])
+              []
+            core_type (src/ast_convenience.mli[90,3107+46]..[90,3107+53])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[90,3107+46]..[90,3107+53])
+              []
+      []
+  signature_item (src/ast_convenience.mli[91,3161+0]..[91,3161+68])
+    Psig_value
+    value_description "pcons" (src/ast_convenience.mli[91,3161+4]..[91,3161+9]) (src/ast_convenience.mli[91,3161+0]..[91,3161+68])
+      core_type (src/ast_convenience.mli[91,3161+11]..[91,3161+68])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[91,3161+16]..[91,3161+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[91,3161+16]..[91,3161+19])
+          []
+        core_type (src/ast_convenience.mli[91,3161+23]..[91,3161+68])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[91,3161+30]..[91,3161+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[91,3161+30]..[91,3161+35])
+            []
+          core_type (src/ast_convenience.mli[91,3161+39]..[91,3161+68])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[91,3161+39]..[91,3161+46])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[91,3161+39]..[91,3161+46])
+              []
+            core_type (src/ast_convenience.mli[91,3161+50]..[91,3161+68])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[91,3161+50]..[91,3161+57])
+                Ptyp_constr "pattern" (src/ast_convenience.mli[91,3161+50]..[91,3161+57])
+                []
+              core_type (src/ast_convenience.mli[91,3161+61]..[91,3161+68])
+                Ptyp_constr "pattern" (src/ast_convenience.mli[91,3161+61]..[91,3161+68])
+                []
+      []
+  signature_item (src/ast_convenience.mli[92,3230+0]..[92,3230+62])
+    Psig_value
+    value_description "plist" (src/ast_convenience.mli[92,3230+4]..[92,3230+9]) (src/ast_convenience.mli[92,3230+0]..[92,3230+62])
+      core_type (src/ast_convenience.mli[92,3230+11]..[92,3230+62])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[92,3230+16]..[92,3230+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[92,3230+16]..[92,3230+19])
+          []
+        core_type (src/ast_convenience.mli[92,3230+23]..[92,3230+62])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[92,3230+30]..[92,3230+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[92,3230+30]..[92,3230+35])
+            []
+          core_type (src/ast_convenience.mli[92,3230+39]..[92,3230+62])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[92,3230+39]..[92,3230+51])
+              Ptyp_constr "list" (src/ast_convenience.mli[92,3230+47]..[92,3230+51])
+              [
+                core_type (src/ast_convenience.mli[92,3230+39]..[92,3230+46])
+                  Ptyp_constr "pattern" (src/ast_convenience.mli[92,3230+39]..[92,3230+46])
+                  []
+              ]
+            core_type (src/ast_convenience.mli[92,3230+55]..[92,3230+62])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[92,3230+55]..[92,3230+62])
+              []
+      []
+  signature_item (src/ast_convenience.mli[94,3294+0]..[94,3294+55])
+    Psig_value
+    value_description "pstr" (src/ast_convenience.mli[94,3294+4]..[94,3294+8]) (src/ast_convenience.mli[94,3294+0]..[94,3294+55])
+      core_type (src/ast_convenience.mli[94,3294+10]..[94,3294+55])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[94,3294+15]..[94,3294+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[94,3294+15]..[94,3294+18])
+          []
+        core_type (src/ast_convenience.mli[94,3294+22]..[94,3294+55])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[94,3294+29]..[94,3294+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[94,3294+29]..[94,3294+34])
+            []
+          core_type (src/ast_convenience.mli[94,3294+38]..[94,3294+55])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[94,3294+38]..[94,3294+44])
+              Ptyp_constr "string" (src/ast_convenience.mli[94,3294+38]..[94,3294+44])
+              []
+            core_type (src/ast_convenience.mli[94,3294+48]..[94,3294+55])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[94,3294+48]..[94,3294+55])
+              []
+      []
+  signature_item (src/ast_convenience.mli[95,3350+0]..[95,3350+52])
+    Psig_value
+    value_description "pint" (src/ast_convenience.mli[95,3350+4]..[95,3350+8]) (src/ast_convenience.mli[95,3350+0]..[95,3350+52])
+      core_type (src/ast_convenience.mli[95,3350+10]..[95,3350+52])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[95,3350+15]..[95,3350+18])
+          Ptyp_constr "loc" (src/ast_convenience.mli[95,3350+15]..[95,3350+18])
+          []
+        core_type (src/ast_convenience.mli[95,3350+22]..[95,3350+52])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[95,3350+29]..[95,3350+34])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[95,3350+29]..[95,3350+34])
+            []
+          core_type (src/ast_convenience.mli[95,3350+38]..[95,3350+52])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[95,3350+38]..[95,3350+41])
+              Ptyp_constr "int" (src/ast_convenience.mli[95,3350+38]..[95,3350+41])
+              []
+            core_type (src/ast_convenience.mli[95,3350+45]..[95,3350+52])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[95,3350+45]..[95,3350+52])
+              []
+      []
+  signature_item (src/ast_convenience.mli[96,3403+0]..[96,3403+54])
+    Psig_value
+    value_description "pchar" (src/ast_convenience.mli[96,3403+4]..[96,3403+9]) (src/ast_convenience.mli[96,3403+0]..[96,3403+54])
+      core_type (src/ast_convenience.mli[96,3403+11]..[96,3403+54])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[96,3403+16]..[96,3403+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[96,3403+16]..[96,3403+19])
+          []
+        core_type (src/ast_convenience.mli[96,3403+23]..[96,3403+54])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[96,3403+30]..[96,3403+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[96,3403+30]..[96,3403+35])
+            []
+          core_type (src/ast_convenience.mli[96,3403+39]..[96,3403+54])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[96,3403+39]..[96,3403+43])
+              Ptyp_constr "char" (src/ast_convenience.mli[96,3403+39]..[96,3403+43])
+              []
+            core_type (src/ast_convenience.mli[96,3403+47]..[96,3403+54])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[96,3403+47]..[96,3403+54])
+              []
+      []
+  signature_item (src/ast_convenience.mli[97,3458+0]..[97,3458+56])
+    Psig_value
+    value_description "pfloat" (src/ast_convenience.mli[97,3458+4]..[97,3458+10]) (src/ast_convenience.mli[97,3458+0]..[97,3458+56])
+      core_type (src/ast_convenience.mli[97,3458+12]..[97,3458+56])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[97,3458+17]..[97,3458+20])
+          Ptyp_constr "loc" (src/ast_convenience.mli[97,3458+17]..[97,3458+20])
+          []
+        core_type (src/ast_convenience.mli[97,3458+24]..[97,3458+56])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[97,3458+31]..[97,3458+36])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[97,3458+31]..[97,3458+36])
+            []
+          core_type (src/ast_convenience.mli[97,3458+40]..[97,3458+56])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[97,3458+40]..[97,3458+45])
+              Ptyp_constr "float" (src/ast_convenience.mli[97,3458+40]..[97,3458+45])
+              []
+            core_type (src/ast_convenience.mli[97,3458+49]..[97,3458+56])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[97,3458+49]..[97,3458+56])
+              []
+      []
+  signature_item (src/ast_convenience.mli[99,3516+0]..[99,3516+54])
+    Psig_value
+    value_description "punit" (src/ast_convenience.mli[99,3516+4]..[99,3516+9]) (src/ast_convenience.mli[99,3516+0]..[99,3516+54])
+      core_type (src/ast_convenience.mli[99,3516+11]..[99,3516+54])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[99,3516+16]..[99,3516+19])
+          Ptyp_constr "loc" (src/ast_convenience.mli[99,3516+16]..[99,3516+19])
+          []
+        core_type (src/ast_convenience.mli[99,3516+23]..[99,3516+54])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[99,3516+30]..[99,3516+35])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[99,3516+30]..[99,3516+35])
+            []
+          core_type (src/ast_convenience.mli[99,3516+39]..[99,3516+54])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[99,3516+39]..[99,3516+43])
+              Ptyp_constr "unit" (src/ast_convenience.mli[99,3516+39]..[99,3516+43])
+              []
+            core_type (src/ast_convenience.mli[99,3516+47]..[99,3516+54])
+              Ptyp_constr "pattern" (src/ast_convenience.mli[99,3516+47]..[99,3516+54])
+              []
+      []
+  signature_item (src/ast_convenience.mli[102,3573+0]..[102,3573+16])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[102,3573+0]..[102,3573+16])
+        Pstr_eval
+        expression (src/ast_convenience.mli[102,3573+0]..[102,3573+16])
+          Pexp_constant PConst_string(" {2 Types} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[104,3591+0]..[104,3591+78])
+    Psig_value
+    value_description "tconstr" (src/ast_convenience.mli[104,3591+4]..[104,3591+11]) (src/ast_convenience.mli[104,3591+0]..[104,3591+78])
+      core_type (src/ast_convenience.mli[104,3591+13]..[104,3591+78])
+        Ptyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[104,3591+18]..[104,3591+21])
+          Ptyp_constr "loc" (src/ast_convenience.mli[104,3591+18]..[104,3591+21])
+          []
+        core_type (src/ast_convenience.mli[104,3591+25]..[104,3591+78])
+          Ptyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[104,3591+32]..[104,3591+37])
+            Ptyp_constr "attrs" (src/ast_convenience.mli[104,3591+32]..[104,3591+37])
+            []
+          core_type (src/ast_convenience.mli[104,3591+41]..[104,3591+78])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[104,3591+41]..[104,3591+47])
+              Ptyp_constr "string" (src/ast_convenience.mli[104,3591+41]..[104,3591+47])
+              []
+            core_type (src/ast_convenience.mli[104,3591+51]..[104,3591+78])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[104,3591+51]..[104,3591+65])
+                Ptyp_constr "list" (src/ast_convenience.mli[104,3591+61]..[104,3591+65])
+                [
+                  core_type (src/ast_convenience.mli[104,3591+51]..[104,3591+60])
+                    Ptyp_constr "core_type" (src/ast_convenience.mli[104,3591+51]..[104,3591+60])
+                    []
+                ]
+              core_type (src/ast_convenience.mli[104,3591+69]..[104,3591+78])
+                Ptyp_constr "core_type" (src/ast_convenience.mli[104,3591+69]..[104,3591+78])
+                []
+      []
+  signature_item (src/ast_convenience.mli[106,3671+0]..[106,3671+29])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[106,3671+0]..[106,3671+29])
+        Pstr_eval
+        expression (src/ast_convenience.mli[106,3671+0]..[106,3671+29])
+          Pexp_constant PConst_string(" {2 AST deconstruction} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[108,3702+0]..[108,3702+40])
+    Psig_value
+    value_description "get_str" (src/ast_convenience.mli[108,3702+4]..[108,3702+11]) (src/ast_convenience.mli[108,3702+0]..[108,3702+40])
+      core_type (src/ast_convenience.mli[108,3702+13]..[108,3702+40])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[108,3702+13]..[108,3702+23])
+          Ptyp_constr "expression" (src/ast_convenience.mli[108,3702+13]..[108,3702+23])
+          []
+        core_type (src/ast_convenience.mli[108,3702+27]..[108,3702+40])
+          Ptyp_constr "option" (src/ast_convenience.mli[108,3702+34]..[108,3702+40])
+          [
+            core_type (src/ast_convenience.mli[108,3702+27]..[108,3702+33])
+              Ptyp_constr "string" (src/ast_convenience.mli[108,3702+27]..[108,3702+33])
+              []
+          ]
+      []
+  signature_item (src/ast_convenience.mli[109,3743+0]..[109,3743+83])
+    Psig_value
+    value_description "get_str_with_quotation_delimiter" (src/ast_convenience.mli[109,3743+4]..[109,3743+36]) (src/ast_convenience.mli[109,3743+0]..[109,3743+83])
+      core_type (src/ast_convenience.mli[109,3743+38]..[109,3743+83])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[109,3743+38]..[109,3743+48])
+          Ptyp_constr "expression" (src/ast_convenience.mli[109,3743+38]..[109,3743+48])
+          []
+        core_type (src/ast_convenience.mli[109,3743+52]..[109,3743+83])
+          Ptyp_constr "option" (src/ast_convenience.mli[109,3743+77]..[109,3743+83])
+          [
+            core_type (src/ast_convenience.mli[109,3743+53]..[109,3743+75])
+              Ptyp_tuple
+              [
+                core_type (src/ast_convenience.mli[109,3743+53]..[109,3743+59])
+                  Ptyp_constr "string" (src/ast_convenience.mli[109,3743+53]..[109,3743+59])
+                  []
+                core_type (src/ast_convenience.mli[109,3743+62]..[109,3743+75])
+                  Ptyp_constr "option" (src/ast_convenience.mli[109,3743+69]..[109,3743+75])
+                  [
+                    core_type (src/ast_convenience.mli[109,3743+62]..[109,3743+68])
+                      Ptyp_constr "string" (src/ast_convenience.mli[109,3743+62]..[109,3743+68])
+                      []
+                  ]
+              ]
+          ]
+      []
+  signature_item (src/ast_convenience.mli[110,3827+0]..[110,3827+40])
+    Psig_value
+    value_description "get_lid" (src/ast_convenience.mli[110,3827+4]..[110,3827+11]) (src/ast_convenience.mli[110,3827+0]..[110,3827+40])
+      core_type (src/ast_convenience.mli[110,3827+13]..[110,3827+40])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[110,3827+13]..[110,3827+23])
+          Ptyp_constr "expression" (src/ast_convenience.mli[110,3827+13]..[110,3827+23])
+          []
+        core_type (src/ast_convenience.mli[110,3827+27]..[110,3827+40])
+          Ptyp_constr "option" (src/ast_convenience.mli[110,3827+34]..[110,3827+40])
+          [
+            core_type (src/ast_convenience.mli[110,3827+27]..[110,3827+33])
+              Ptyp_constr "string" (src/ast_convenience.mli[110,3827+27]..[110,3827+33])
+              []
+          ]
+      []
+  signature_item (src/ast_convenience.mli[112,3869+0]..[112,3869+42])
+    Psig_value
+    value_description "has_attr" (src/ast_convenience.mli[112,3869+4]..[112,3869+12]) (src/ast_convenience.mli[112,3869+0]..[112,3869+42])
+      core_type (src/ast_convenience.mli[112,3869+14]..[112,3869+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[112,3869+14]..[112,3869+20])
+          Ptyp_constr "string" (src/ast_convenience.mli[112,3869+14]..[112,3869+20])
+          []
+        core_type (src/ast_convenience.mli[112,3869+24]..[112,3869+42])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[112,3869+24]..[112,3869+34])
+            Ptyp_constr "attributes" (src/ast_convenience.mli[112,3869+24]..[112,3869+34])
+            []
+          core_type (src/ast_convenience.mli[112,3869+38]..[112,3869+42])
+            Ptyp_constr "bool" (src/ast_convenience.mli[112,3869+38]..[112,3869+42])
+            []
+      []
+  signature_item (src/ast_convenience.mli[113,3912+0]..[113,3912+53])
+    Psig_value
+    value_description "find_attr" (src/ast_convenience.mli[113,3912+4]..[113,3912+13]) (src/ast_convenience.mli[113,3912+0]..[113,3912+53])
+      core_type (src/ast_convenience.mli[113,3912+15]..[113,3912+53])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[113,3912+15]..[113,3912+21])
+          Ptyp_constr "string" (src/ast_convenience.mli[113,3912+15]..[113,3912+21])
+          []
+        core_type (src/ast_convenience.mli[113,3912+25]..[113,3912+53])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[113,3912+25]..[113,3912+35])
+            Ptyp_constr "attributes" (src/ast_convenience.mli[113,3912+25]..[113,3912+35])
+            []
+          core_type (src/ast_convenience.mli[113,3912+39]..[113,3912+53])
+            Ptyp_constr "option" (src/ast_convenience.mli[113,3912+47]..[113,3912+53])
+            [
+              core_type (src/ast_convenience.mli[113,3912+39]..[113,3912+46])
+                Ptyp_constr "payload" (src/ast_convenience.mli[113,3912+39]..[113,3912+46])
+                []
+            ]
+      []
+  signature_item (src/ast_convenience.mli[114,3966+0]..[114,3966+61])
+    Psig_value
+    value_description "find_attr_expr" (src/ast_convenience.mli[114,3966+4]..[114,3966+18]) (src/ast_convenience.mli[114,3966+0]..[114,3966+61])
+      core_type (src/ast_convenience.mli[114,3966+20]..[114,3966+61])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[114,3966+20]..[114,3966+26])
+          Ptyp_constr "string" (src/ast_convenience.mli[114,3966+20]..[114,3966+26])
+          []
+        core_type (src/ast_convenience.mli[114,3966+30]..[114,3966+61])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[114,3966+30]..[114,3966+40])
+            Ptyp_constr "attributes" (src/ast_convenience.mli[114,3966+30]..[114,3966+40])
+            []
+          core_type (src/ast_convenience.mli[114,3966+44]..[114,3966+61])
+            Ptyp_constr "option" (src/ast_convenience.mli[114,3966+55]..[114,3966+61])
+            [
+              core_type (src/ast_convenience.mli[114,3966+44]..[114,3966+54])
+                Ptyp_constr "expression" (src/ast_convenience.mli[114,3966+44]..[114,3966+54])
+                []
+            ]
+      []
+]
+
+[@@@ocaml.text
+  " {1 Convenience functions to help build and deconstruct AST fragments.} "]
+open Asttypes
+open Ast_helper
+open Parsetree
+[@@@ocaml.text " {2 Compatibility modules} "]
+module Label :
+sig
+  type t = Asttypes.arg_label
+  type desc = Asttypes.arg_label =
+    | Nolabel 
+    | Labelled of string 
+    | Optional of string 
+  val explode : t -> desc
+  val nolabel : t
+  val labelled : string -> t
+  val optional : string -> t
+end
+module Constant :
+sig
+  type t = Parsetree.constant =
+    | Pconst_integer of string * char option 
+    | Pconst_char of char 
+    | Pconst_string of string * string option 
+    | Pconst_float of string * char option 
+  val of_constant : Parsetree.constant -> t[@@ocaml.doc
+                                             " Convert Asttypes.constant to Constant.t "]
+  val to_constant : t -> Parsetree.constant[@@ocaml.doc
+                                             " Convert Constant.t to Asttypes.constant "]
+end[@@ocaml.doc
+     " {2 Provides a unified abstraction over differences in Parsetree.constant and Asttypes.constant \n * types defined in ocaml 4.03 and 4.02 respectively}"]
+[@@@ocaml.text " {2 Misc} "]
+val lid : ?loc:loc -> string -> lid
+[@@@ocaml.text " {2 Expressions} "]
+val evar : ?loc:loc -> ?attrs:attrs -> string -> expression
+val let_in :
+  ?loc:loc ->
+    ?attrs:attrs ->
+      ?recursive:bool -> value_binding list -> expression -> expression
+val constr :
+  ?loc:loc -> ?attrs:attrs -> string -> expression list -> expression
+val record :
+  ?loc:loc ->
+    ?attrs:attrs ->
+      ?over:expression -> (string * expression) list -> expression
+val tuple : ?loc:loc -> ?attrs:attrs -> expression list -> expression
+val nil : ?loc:loc -> ?attrs:attrs -> unit -> expression
+val cons : ?loc:loc -> ?attrs:attrs -> expression -> expression -> expression
+val list : ?loc:loc -> ?attrs:attrs -> expression list -> expression
+val unit : ?loc:loc -> ?attrs:attrs -> unit -> expression
+val func :
+  ?loc:loc -> ?attrs:attrs -> (pattern * expression) list -> expression
+val lam :
+  ?loc:loc ->
+    ?attrs:attrs ->
+      ?label:Label.t ->
+        ?default:expression -> pattern -> expression -> expression
+val app :
+  ?loc:loc -> ?attrs:attrs -> expression -> expression list -> expression
+val str : ?loc:loc -> ?attrs:attrs -> string -> expression
+val int : ?loc:loc -> ?attrs:attrs -> int -> expression
+val int32 : ?loc:loc -> ?attrs:attrs -> int32 -> expression
+val int64 : ?loc:loc -> ?attrs:attrs -> int64 -> expression
+val char : ?loc:loc -> ?attrs:attrs -> char -> expression
+val float : ?loc:loc -> ?attrs:attrs -> float -> expression
+val sequence : ?loc:loc -> ?attrs:attrs -> expression list -> expression
+[@@ocaml.doc " Return [()] if the list is empty. Tail rec. "]
+[@@@ocaml.text " {2 Patterns} "]
+val pvar : ?loc:loc -> ?attrs:attrs -> string -> pattern
+val pconstr : ?loc:loc -> ?attrs:attrs -> string -> pattern list -> pattern
+val precord :
+  ?loc:loc ->
+    ?attrs:attrs -> ?closed:closed_flag -> (string * pattern) list -> pattern
+val ptuple : ?loc:loc -> ?attrs:attrs -> pattern list -> pattern
+val pnil : ?loc:loc -> ?attrs:attrs -> unit -> pattern
+val pcons : ?loc:loc -> ?attrs:attrs -> pattern -> pattern -> pattern
+val plist : ?loc:loc -> ?attrs:attrs -> pattern list -> pattern
+val pstr : ?loc:loc -> ?attrs:attrs -> string -> pattern
+val pint : ?loc:loc -> ?attrs:attrs -> int -> pattern
+val pchar : ?loc:loc -> ?attrs:attrs -> char -> pattern
+val pfloat : ?loc:loc -> ?attrs:attrs -> float -> pattern
+val punit : ?loc:loc -> ?attrs:attrs -> unit -> pattern
+[@@@ocaml.text " {2 Types} "]
+val tconstr :
+  ?loc:loc -> ?attrs:attrs -> string -> core_type list -> core_type
+[@@@ocaml.text " {2 AST deconstruction} "]
+val get_str : expression -> string option
+val get_str_with_quotation_delimiter :
+  expression -> (string * string option) option
+val get_lid : expression -> string option
+val has_attr : string -> attributes -> bool
+val find_attr : string -> attributes -> payload option
+val find_attr_expr : string -> attributes -> expression option
+[
+  signature_item (src/ast_convenience.mli[5,235+0]..src/ast_convenience.mli[5,235+77])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[5,235+0]..[5,235+77])
+        Pstr_eval
+        expression (src/ast_convenience.mli[5,235+0]..[5,235+77])
+          Pexp_constant PConst_string(" {1 Convenience functions to help build and deconstruct AST fragments.} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[7,314+0]..src/ast_convenience.mli[7,314+13])
+    Tsig_open Fresh "Asttypes!"
+  signature_item (src/ast_convenience.mli[8,328+0]..src/ast_convenience.mli[8,328+15])
+    Tsig_open Fresh "Ast_helper!"
+  signature_item (src/ast_convenience.mli[9,344+0]..src/ast_convenience.mli[9,344+14])
+    Tsig_open Fresh "Parsetree!"
+  signature_item (src/ast_convenience.mli[11,360+0]..src/ast_convenience.mli[11,360+32])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[11,360+0]..[11,360+32])
+        Pstr_eval
+        expression (src/ast_convenience.mli[11,360+0]..[11,360+32])
+          Pexp_constant PConst_string(" {2 Compatibility modules} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[13,394+0]..src/ast_convenience.mli[27,648+3])
+    Tsig_module "Label/207"
+    module_type (src/ast_convenience.mli[13,394+15]..src/ast_convenience.mli[27,648+3])
+      Tmty_signature
+      [
+        signature_item (src/ast_convenience.mli[14,413+2]..src/ast_convenience.mli[14,413+29])
+          Tsig_type Rec
+          [
+            type_declaration t/198 (src/ast_convenience.mli[14,413+2]..src/ast_convenience.mli[14,413+29])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[14,413+11]..src/ast_convenience.mli[14,413+29])
+                    Ttyp_constr "Asttypes!.arg_label"
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[16,444+2]..src/ast_convenience.mli[19,518+24])
+          Tsig_type Rec
+          [
+            type_declaration desc/199 (src/ast_convenience.mli[16,444+2]..src/ast_convenience.mli[19,518+24])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_variant
+                  [
+                    (src/ast_convenience.mli[17,479+6]..src/ast_convenience.mli[17,479+13])
+                      Nolabel/200
+                      []
+                      None
+                    (src/ast_convenience.mli[18,493+4]..src/ast_convenience.mli[18,493+24])
+                      Labelled/201
+                      [
+                        core_type (src/ast_convenience.mli[18,493+18]..src/ast_convenience.mli[18,493+24])
+                          Ttyp_constr "string/15!"
+                          []
+                      ]
+                      None
+                    (src/ast_convenience.mli[19,518+4]..src/ast_convenience.mli[19,518+24])
+                      Optional/202
+                      [
+                        core_type (src/ast_convenience.mli[19,518+18]..src/ast_convenience.mli[19,518+24])
+                          Ttyp_constr "string/15!"
+                          []
+                      ]
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[16,444+14]..src/ast_convenience.mli[16,444+32])
+                    Ttyp_constr "Asttypes!.arg_label"
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[21,544+2]..src/ast_convenience.mli[21,544+25])
+          Tsig_value
+          value_description explode/203 (src/ast_convenience.mli[21,544+2]..src/ast_convenience.mli[21,544+25])
+            core_type (src/ast_convenience.mli[21,544+16]..src/ast_convenience.mli[21,544+25])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[21,544+16]..src/ast_convenience.mli[21,544+17])
+                Ttyp_constr "t/198"
+                []
+              core_type (src/ast_convenience.mli[21,544+21]..src/ast_convenience.mli[21,544+25])
+                Ttyp_constr "desc/199"
+                []
+            []
+        signature_item (src/ast_convenience.mli[23,571+2]..src/ast_convenience.mli[23,571+17])
+          Tsig_value
+          value_description nolabel/204 (src/ast_convenience.mli[23,571+2]..src/ast_convenience.mli[23,571+17])
+            core_type (src/ast_convenience.mli[23,571+16]..src/ast_convenience.mli[23,571+17])
+              Ttyp_constr "t/198"
+              []
+            []
+        signature_item (src/ast_convenience.mli[24,589+2]..src/ast_convenience.mli[24,589+28])
+          Tsig_value
+          value_description labelled/205 (src/ast_convenience.mli[24,589+2]..src/ast_convenience.mli[24,589+28])
+            core_type (src/ast_convenience.mli[24,589+17]..src/ast_convenience.mli[24,589+28])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[24,589+17]..src/ast_convenience.mli[24,589+23])
+                Ttyp_constr "string/15!"
+                []
+              core_type (src/ast_convenience.mli[24,589+27]..src/ast_convenience.mli[24,589+28])
+                Ttyp_constr "t/198"
+                []
+            []
+        signature_item (src/ast_convenience.mli[25,618+2]..src/ast_convenience.mli[25,618+28])
+          Tsig_value
+          value_description optional/206 (src/ast_convenience.mli[25,618+2]..src/ast_convenience.mli[25,618+28])
+            core_type (src/ast_convenience.mli[25,618+17]..src/ast_convenience.mli[25,618+28])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[25,618+17]..src/ast_convenience.mli[25,618+23])
+                Ttyp_constr "string/15!"
+                []
+              core_type (src/ast_convenience.mli[25,618+27]..src/ast_convenience.mli[25,618+28])
+                Ttyp_constr "t/198"
+                []
+            []
+      ]
+  signature_item (src/ast_convenience.mli[31,809+0]..src/ast_convenience.mli[48,1284+3])
+    Tsig_module "Constant/215"
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_convenience.mli[29,653+0]..[30,753+55])
+            Pstr_eval
+            expression (src/ast_convenience.mli[29,653+0]..[30,753+55])
+              Pexp_constant PConst_string(" {2 Provides a unified abstraction over differences in Parsetree.constant and Asttypes.constant \n * types defined in ocaml 4.03 and 4.02 respectively}",None)
+        ]
+    module_type (src/ast_convenience.mli[31,809+18]..src/ast_convenience.mli[48,1284+3])
+      Tmty_signature
+      [
+        signature_item (src/ast_convenience.mli[32,832+2]..src/ast_convenience.mli[40,1050+41])
+          Tsig_type Rec
+          [
+            type_declaration t/208 (src/ast_convenience.mli[32,832+2]..src/ast_convenience.mli[40,1050+41])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_variant
+                  [
+                    (src/ast_convenience.mli[33,864+5]..src/ast_convenience.mli[33,864+43])
+                      Pconst_integer/209
+                      [
+                        core_type (src/ast_convenience.mli[33,864+23]..src/ast_convenience.mli[33,864+29])
+                          Ttyp_constr "string/15!"
+                          []
+                        core_type (src/ast_convenience.mli[33,864+32]..src/ast_convenience.mli[33,864+43])
+                          Ttyp_constr "option/10!"
+                          [
+                            core_type (src/ast_convenience.mli[33,864+32]..src/ast_convenience.mli[33,864+36])
+                              Ttyp_constr "char/2!"
+                              []
+                          ]
+                      ]
+                      None
+                    (src/ast_convenience.mli[34,909+3]..src/ast_convenience.mli[34,909+24])
+                      Pconst_char/210
+                      [
+                        core_type (src/ast_convenience.mli[34,909+20]..src/ast_convenience.mli[34,909+24])
+                          Ttyp_constr "char/2!"
+                          []
+                      ]
+                      None
+                    (src/ast_convenience.mli[38,970+3]..src/ast_convenience.mli[38,970+44])
+                      Pconst_string/211
+                      [
+                        core_type (src/ast_convenience.mli[38,970+22]..src/ast_convenience.mli[38,970+28])
+                          Ttyp_constr "string/15!"
+                          []
+                        core_type (src/ast_convenience.mli[38,970+31]..src/ast_convenience.mli[38,970+44])
+                          Ttyp_constr "option/10!"
+                          [
+                            core_type (src/ast_convenience.mli[38,970+31]..src/ast_convenience.mli[38,970+37])
+                              Ttyp_constr "string/15!"
+                              []
+                          ]
+                      ]
+                      None
+                    (src/ast_convenience.mli[40,1050+3]..src/ast_convenience.mli[40,1050+41])
+                      Pconst_float/212
+                      [
+                        core_type (src/ast_convenience.mli[40,1050+21]..src/ast_convenience.mli[40,1050+27])
+                          Ttyp_constr "string/15!"
+                          []
+                        core_type (src/ast_convenience.mli[40,1050+30]..src/ast_convenience.mli[40,1050+41])
+                          Ttyp_constr "option/10!"
+                          [
+                            core_type (src/ast_convenience.mli[40,1050+30]..src/ast_convenience.mli[40,1050+34])
+                              Ttyp_constr "char/2!"
+                              []
+                          ]
+                      ]
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/ast_convenience.mli[32,832+11]..src/ast_convenience.mli[32,832+29])
+                    Ttyp_constr "Parsetree!.constant"
+                    []
+          ]
+        signature_item (src/ast_convenience.mli[43,1145+2]..src/ast_convenience.mli[43,1145+43])
+          Tsig_value
+          value_description of_constant/213 (src/ast_convenience.mli[43,1145+2]..src/ast_convenience.mli[43,1145+43])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/ast_convenience.mli[42,1095+2]..[42,1095+48])
+                  Pstr_eval
+                  expression (src/ast_convenience.mli[42,1095+2]..[42,1095+48])
+                    Pexp_constant PConst_string(" Convert Asttypes.constant to Constant.t ",None)
+              ]
+            core_type (src/ast_convenience.mli[43,1145+20]..src/ast_convenience.mli[43,1145+43])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[43,1145+20]..src/ast_convenience.mli[43,1145+38])
+                Ttyp_constr "Parsetree!.constant"
+                []
+              core_type (src/ast_convenience.mli[43,1145+42]..src/ast_convenience.mli[43,1145+43])
+                Ttyp_constr "t/208"
+                []
+            []
+        signature_item (src/ast_convenience.mli[46,1239+2]..src/ast_convenience.mli[46,1239+43])
+          Tsig_value
+          value_description to_constant/214 (src/ast_convenience.mli[46,1239+2]..src/ast_convenience.mli[46,1239+43])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/ast_convenience.mli[45,1190+2]..[45,1190+48])
+                  Pstr_eval
+                  expression (src/ast_convenience.mli[45,1190+2]..[45,1190+48])
+                    Pexp_constant PConst_string(" Convert Constant.t to Asttypes.constant ",None)
+              ]
+            core_type (src/ast_convenience.mli[46,1239+20]..src/ast_convenience.mli[46,1239+43])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[46,1239+20]..src/ast_convenience.mli[46,1239+21])
+                Ttyp_constr "t/208"
+                []
+              core_type (src/ast_convenience.mli[46,1239+25]..src/ast_convenience.mli[46,1239+43])
+                Ttyp_constr "Parsetree!.constant"
+                []
+            []
+      ]
+  signature_item (src/ast_convenience.mli[50,1289+0]..src/ast_convenience.mli[50,1289+15])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[50,1289+0]..[50,1289+15])
+        Pstr_eval
+        expression (src/ast_convenience.mli[50,1289+0]..[50,1289+15])
+          Pexp_constant PConst_string(" {2 Misc} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[52,1306+0]..src/ast_convenience.mli[52,1306+34])
+    Tsig_value
+    value_description lid/216 (src/ast_convenience.mli[52,1306+0]..src/ast_convenience.mli[52,1306+34])
+      core_type (src/ast_convenience.mli[52,1306+9]..src/ast_convenience.mli[52,1306+34])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[52,1306+14]..src/ast_convenience.mli[52,1306+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[52,1306+21]..src/ast_convenience.mli[52,1306+34])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[52,1306+21]..src/ast_convenience.mli[52,1306+27])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/ast_convenience.mli[52,1306+31]..src/ast_convenience.mli[52,1306+34])
+            Ttyp_constr "Ast_helper!.lid"
+            []
+      []
+  signature_item (src/ast_convenience.mli[54,1342+0]..src/ast_convenience.mli[54,1342+22])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[54,1342+0]..[54,1342+22])
+        Pstr_eval
+        expression (src/ast_convenience.mli[54,1342+0]..[54,1342+22])
+          Pexp_constant PConst_string(" {2 Expressions} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[56,1366+0]..src/ast_convenience.mli[56,1366+58])
+    Tsig_value
+    value_description evar/217 (src/ast_convenience.mli[56,1366+0]..src/ast_convenience.mli[56,1366+58])
+      core_type (src/ast_convenience.mli[56,1366+10]..src/ast_convenience.mli[56,1366+58])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[56,1366+15]..src/ast_convenience.mli[56,1366+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[56,1366+22]..src/ast_convenience.mli[56,1366+58])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[56,1366+29]..src/ast_convenience.mli[56,1366+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[56,1366+38]..src/ast_convenience.mli[56,1366+58])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[56,1366+38]..src/ast_convenience.mli[56,1366+44])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[56,1366+48]..src/ast_convenience.mli[56,1366+58])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[57,1425+0]..src/ast_convenience.mli[57,1425+105])
+    Tsig_value
+    value_description let_in/218 (src/ast_convenience.mli[57,1425+0]..src/ast_convenience.mli[57,1425+105])
+      core_type (src/ast_convenience.mli[57,1425+12]..src/ast_convenience.mli[57,1425+105])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[57,1425+17]..src/ast_convenience.mli[57,1425+20])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[57,1425+24]..src/ast_convenience.mli[57,1425+105])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[57,1425+31]..src/ast_convenience.mli[57,1425+36])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[57,1425+40]..src/ast_convenience.mli[57,1425+105])
+            Ttyp_arrow
+            Optional "recursive"
+            core_type (src/ast_convenience.mli[57,1425+51]..src/ast_convenience.mli[57,1425+55])
+              Ttyp_constr "bool/5!"
+              []
+            core_type (src/ast_convenience.mli[57,1425+59]..src/ast_convenience.mli[57,1425+105])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[57,1425+59]..src/ast_convenience.mli[57,1425+77])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[57,1425+59]..src/ast_convenience.mli[57,1425+72])
+                    Ttyp_constr "Parsetree!.value_binding"
+                    []
+                ]
+              core_type (src/ast_convenience.mli[57,1425+81]..src/ast_convenience.mli[57,1425+105])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/ast_convenience.mli[57,1425+81]..src/ast_convenience.mli[57,1425+91])
+                  Ttyp_constr "Parsetree!.expression"
+                  []
+                core_type (src/ast_convenience.mli[57,1425+95]..src/ast_convenience.mli[57,1425+105])
+                  Ttyp_constr "Parsetree!.expression"
+                  []
+      []
+  signature_item (src/ast_convenience.mli[59,1532+0]..src/ast_convenience.mli[59,1532+79])
+    Tsig_value
+    value_description constr/219 (src/ast_convenience.mli[59,1532+0]..src/ast_convenience.mli[59,1532+79])
+      core_type (src/ast_convenience.mli[59,1532+12]..src/ast_convenience.mli[59,1532+79])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[59,1532+17]..src/ast_convenience.mli[59,1532+20])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[59,1532+24]..src/ast_convenience.mli[59,1532+79])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[59,1532+31]..src/ast_convenience.mli[59,1532+36])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[59,1532+40]..src/ast_convenience.mli[59,1532+79])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[59,1532+40]..src/ast_convenience.mli[59,1532+46])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[59,1532+50]..src/ast_convenience.mli[59,1532+79])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[59,1532+50]..src/ast_convenience.mli[59,1532+65])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[59,1532+50]..src/ast_convenience.mli[59,1532+60])
+                    Ttyp_constr "Parsetree!.expression"
+                    []
+                ]
+              core_type (src/ast_convenience.mli[59,1532+69]..src/ast_convenience.mli[59,1532+79])
+                Ttyp_constr "Parsetree!.expression"
+                []
+      []
+  signature_item (src/ast_convenience.mli[60,1612+0]..src/ast_convenience.mli[60,1612+100])
+    Tsig_value
+    value_description record/220 (src/ast_convenience.mli[60,1612+0]..src/ast_convenience.mli[60,1612+100])
+      core_type (src/ast_convenience.mli[60,1612+12]..src/ast_convenience.mli[60,1612+100])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[60,1612+17]..src/ast_convenience.mli[60,1612+20])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[60,1612+24]..src/ast_convenience.mli[60,1612+100])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[60,1612+31]..src/ast_convenience.mli[60,1612+36])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[60,1612+40]..src/ast_convenience.mli[60,1612+100])
+            Ttyp_arrow
+            Optional "over"
+            core_type (src/ast_convenience.mli[60,1612+46]..src/ast_convenience.mli[60,1612+56])
+              Ttyp_constr "Parsetree!.expression"
+              []
+            core_type (src/ast_convenience.mli[60,1612+60]..src/ast_convenience.mli[60,1612+100])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[60,1612+60]..src/ast_convenience.mli[60,1612+86])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[60,1612+61]..src/ast_convenience.mli[60,1612+80])
+                    Ttyp_tuple
+                    [
+                      core_type (src/ast_convenience.mli[60,1612+61]..src/ast_convenience.mli[60,1612+67])
+                        Ttyp_constr "string/15!"
+                        []
+                      core_type (src/ast_convenience.mli[60,1612+70]..src/ast_convenience.mli[60,1612+80])
+                        Ttyp_constr "Parsetree!.expression"
+                        []
+                    ]
+                ]
+              core_type (src/ast_convenience.mli[60,1612+90]..src/ast_convenience.mli[60,1612+100])
+                Ttyp_constr "Parsetree!.expression"
+                []
+      []
+  signature_item (src/ast_convenience.mli[61,1713+0]..src/ast_convenience.mli[61,1713+68])
+    Tsig_value
+    value_description tuple/221 (src/ast_convenience.mli[61,1713+0]..src/ast_convenience.mli[61,1713+68])
+      core_type (src/ast_convenience.mli[61,1713+11]..src/ast_convenience.mli[61,1713+68])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[61,1713+16]..src/ast_convenience.mli[61,1713+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[61,1713+23]..src/ast_convenience.mli[61,1713+68])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[61,1713+30]..src/ast_convenience.mli[61,1713+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[61,1713+39]..src/ast_convenience.mli[61,1713+68])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[61,1713+39]..src/ast_convenience.mli[61,1713+54])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[61,1713+39]..src/ast_convenience.mli[61,1713+49])
+                  Ttyp_constr "Parsetree!.expression"
+                  []
+              ]
+            core_type (src/ast_convenience.mli[61,1713+58]..src/ast_convenience.mli[61,1713+68])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[63,1783+0]..src/ast_convenience.mli[63,1783+55])
+    Tsig_value
+    value_description nil/222 (src/ast_convenience.mli[63,1783+0]..src/ast_convenience.mli[63,1783+55])
+      core_type (src/ast_convenience.mli[63,1783+9]..src/ast_convenience.mli[63,1783+55])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[63,1783+14]..src/ast_convenience.mli[63,1783+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[63,1783+21]..src/ast_convenience.mli[63,1783+55])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[63,1783+28]..src/ast_convenience.mli[63,1783+33])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[63,1783+37]..src/ast_convenience.mli[63,1783+55])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[63,1783+37]..src/ast_convenience.mli[63,1783+41])
+              Ttyp_constr "unit/6!"
+              []
+            core_type (src/ast_convenience.mli[63,1783+45]..src/ast_convenience.mli[63,1783+55])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[64,1839+0]..src/ast_convenience.mli[64,1839+76])
+    Tsig_value
+    value_description cons/223 (src/ast_convenience.mli[64,1839+0]..src/ast_convenience.mli[64,1839+76])
+      core_type (src/ast_convenience.mli[64,1839+10]..src/ast_convenience.mli[64,1839+76])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[64,1839+15]..src/ast_convenience.mli[64,1839+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[64,1839+22]..src/ast_convenience.mli[64,1839+76])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[64,1839+29]..src/ast_convenience.mli[64,1839+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[64,1839+38]..src/ast_convenience.mli[64,1839+76])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[64,1839+38]..src/ast_convenience.mli[64,1839+48])
+              Ttyp_constr "Parsetree!.expression"
+              []
+            core_type (src/ast_convenience.mli[64,1839+52]..src/ast_convenience.mli[64,1839+76])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[64,1839+52]..src/ast_convenience.mli[64,1839+62])
+                Ttyp_constr "Parsetree!.expression"
+                []
+              core_type (src/ast_convenience.mli[64,1839+66]..src/ast_convenience.mli[64,1839+76])
+                Ttyp_constr "Parsetree!.expression"
+                []
+      []
+  signature_item (src/ast_convenience.mli[65,1916+0]..src/ast_convenience.mli[65,1916+67])
+    Tsig_value
+    value_description list/224 (src/ast_convenience.mli[65,1916+0]..src/ast_convenience.mli[65,1916+67])
+      core_type (src/ast_convenience.mli[65,1916+10]..src/ast_convenience.mli[65,1916+67])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[65,1916+15]..src/ast_convenience.mli[65,1916+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[65,1916+22]..src/ast_convenience.mli[65,1916+67])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[65,1916+29]..src/ast_convenience.mli[65,1916+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[65,1916+38]..src/ast_convenience.mli[65,1916+67])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[65,1916+38]..src/ast_convenience.mli[65,1916+53])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[65,1916+38]..src/ast_convenience.mli[65,1916+48])
+                  Ttyp_constr "Parsetree!.expression"
+                  []
+              ]
+            core_type (src/ast_convenience.mli[65,1916+57]..src/ast_convenience.mli[65,1916+67])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[67,1985+0]..src/ast_convenience.mli[67,1985+56])
+    Tsig_value
+    value_description unit/225 (src/ast_convenience.mli[67,1985+0]..src/ast_convenience.mli[67,1985+56])
+      core_type (src/ast_convenience.mli[67,1985+10]..src/ast_convenience.mli[67,1985+56])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[67,1985+15]..src/ast_convenience.mli[67,1985+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[67,1985+22]..src/ast_convenience.mli[67,1985+56])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[67,1985+29]..src/ast_convenience.mli[67,1985+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[67,1985+38]..src/ast_convenience.mli[67,1985+56])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[67,1985+38]..src/ast_convenience.mli[67,1985+42])
+              Ttyp_constr "unit/6!"
+              []
+            core_type (src/ast_convenience.mli[67,1985+46]..src/ast_convenience.mli[67,1985+56])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[69,2043+0]..src/ast_convenience.mli[69,2043+79])
+    Tsig_value
+    value_description func/226 (src/ast_convenience.mli[69,2043+0]..src/ast_convenience.mli[69,2043+79])
+      core_type (src/ast_convenience.mli[69,2043+10]..src/ast_convenience.mli[69,2043+79])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[69,2043+15]..src/ast_convenience.mli[69,2043+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[69,2043+22]..src/ast_convenience.mli[69,2043+79])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[69,2043+29]..src/ast_convenience.mli[69,2043+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[69,2043+38]..src/ast_convenience.mli[69,2043+79])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[69,2043+38]..src/ast_convenience.mli[69,2043+65])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[69,2043+39]..src/ast_convenience.mli[69,2043+59])
+                  Ttyp_tuple
+                  [
+                    core_type (src/ast_convenience.mli[69,2043+39]..src/ast_convenience.mli[69,2043+46])
+                      Ttyp_constr "Parsetree!.pattern"
+                      []
+                    core_type (src/ast_convenience.mli[69,2043+49]..src/ast_convenience.mli[69,2043+59])
+                      Ttyp_constr "Parsetree!.expression"
+                      []
+                  ]
+              ]
+            core_type (src/ast_convenience.mli[69,2043+69]..src/ast_convenience.mli[69,2043+79])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[70,2123+0]..src/ast_convenience.mli[70,2123+113])
+    Tsig_value
+    value_description lam/227 (src/ast_convenience.mli[70,2123+0]..src/ast_convenience.mli[70,2123+113])
+      core_type (src/ast_convenience.mli[70,2123+9]..src/ast_convenience.mli[70,2123+113])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[70,2123+14]..src/ast_convenience.mli[70,2123+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[70,2123+21]..src/ast_convenience.mli[70,2123+113])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[70,2123+28]..src/ast_convenience.mli[70,2123+33])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[70,2123+37]..src/ast_convenience.mli[70,2123+113])
+            Ttyp_arrow
+            Optional "label"
+            core_type (src/ast_convenience.mli[70,2123+44]..src/ast_convenience.mli[70,2123+51])
+              Ttyp_constr "Label/207.t"
+              []
+            core_type (src/ast_convenience.mli[70,2123+55]..src/ast_convenience.mli[70,2123+113])
+              Ttyp_arrow
+              Optional "default"
+              core_type (src/ast_convenience.mli[70,2123+64]..src/ast_convenience.mli[70,2123+74])
+                Ttyp_constr "Parsetree!.expression"
+                []
+              core_type (src/ast_convenience.mli[70,2123+78]..src/ast_convenience.mli[70,2123+113])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/ast_convenience.mli[70,2123+78]..src/ast_convenience.mli[70,2123+85])
+                  Ttyp_constr "Parsetree!.pattern"
+                  []
+                core_type (src/ast_convenience.mli[70,2123+89]..src/ast_convenience.mli[70,2123+113])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/ast_convenience.mli[70,2123+89]..src/ast_convenience.mli[70,2123+99])
+                    Ttyp_constr "Parsetree!.expression"
+                    []
+                  core_type (src/ast_convenience.mli[70,2123+103]..src/ast_convenience.mli[70,2123+113])
+                    Ttyp_constr "Parsetree!.expression"
+                    []
+      []
+  signature_item (src/ast_convenience.mli[71,2237+0]..src/ast_convenience.mli[71,2237+80])
+    Tsig_value
+    value_description app/228 (src/ast_convenience.mli[71,2237+0]..src/ast_convenience.mli[71,2237+80])
+      core_type (src/ast_convenience.mli[71,2237+9]..src/ast_convenience.mli[71,2237+80])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[71,2237+14]..src/ast_convenience.mli[71,2237+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[71,2237+21]..src/ast_convenience.mli[71,2237+80])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[71,2237+28]..src/ast_convenience.mli[71,2237+33])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[71,2237+37]..src/ast_convenience.mli[71,2237+80])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[71,2237+37]..src/ast_convenience.mli[71,2237+47])
+              Ttyp_constr "Parsetree!.expression"
+              []
+            core_type (src/ast_convenience.mli[71,2237+51]..src/ast_convenience.mli[71,2237+80])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[71,2237+51]..src/ast_convenience.mli[71,2237+66])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[71,2237+51]..src/ast_convenience.mli[71,2237+61])
+                    Ttyp_constr "Parsetree!.expression"
+                    []
+                ]
+              core_type (src/ast_convenience.mli[71,2237+70]..src/ast_convenience.mli[71,2237+80])
+                Ttyp_constr "Parsetree!.expression"
+                []
+      []
+  signature_item (src/ast_convenience.mli[73,2319+0]..src/ast_convenience.mli[73,2319+57])
+    Tsig_value
+    value_description str/229 (src/ast_convenience.mli[73,2319+0]..src/ast_convenience.mli[73,2319+57])
+      core_type (src/ast_convenience.mli[73,2319+9]..src/ast_convenience.mli[73,2319+57])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[73,2319+14]..src/ast_convenience.mli[73,2319+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[73,2319+21]..src/ast_convenience.mli[73,2319+57])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[73,2319+28]..src/ast_convenience.mli[73,2319+33])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[73,2319+37]..src/ast_convenience.mli[73,2319+57])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[73,2319+37]..src/ast_convenience.mli[73,2319+43])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[73,2319+47]..src/ast_convenience.mli[73,2319+57])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[74,2377+0]..src/ast_convenience.mli[74,2377+54])
+    Tsig_value
+    value_description int/230 (src/ast_convenience.mli[74,2377+0]..src/ast_convenience.mli[74,2377+54])
+      core_type (src/ast_convenience.mli[74,2377+9]..src/ast_convenience.mli[74,2377+54])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[74,2377+14]..src/ast_convenience.mli[74,2377+17])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[74,2377+21]..src/ast_convenience.mli[74,2377+54])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[74,2377+28]..src/ast_convenience.mli[74,2377+33])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[74,2377+37]..src/ast_convenience.mli[74,2377+54])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[74,2377+37]..src/ast_convenience.mli[74,2377+40])
+              Ttyp_constr "int/1!"
+              []
+            core_type (src/ast_convenience.mli[74,2377+44]..src/ast_convenience.mli[74,2377+54])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[75,2432+0]..src/ast_convenience.mli[75,2432+58])
+    Tsig_value
+    value_description int32/231 (src/ast_convenience.mli[75,2432+0]..src/ast_convenience.mli[75,2432+58])
+      core_type (src/ast_convenience.mli[75,2432+11]..src/ast_convenience.mli[75,2432+58])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[75,2432+16]..src/ast_convenience.mli[75,2432+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[75,2432+23]..src/ast_convenience.mli[75,2432+58])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[75,2432+30]..src/ast_convenience.mli[75,2432+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[75,2432+39]..src/ast_convenience.mli[75,2432+58])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[75,2432+39]..src/ast_convenience.mli[75,2432+44])
+              Ttyp_constr "int32/12!"
+              []
+            core_type (src/ast_convenience.mli[75,2432+48]..src/ast_convenience.mli[75,2432+58])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[76,2491+0]..src/ast_convenience.mli[76,2491+58])
+    Tsig_value
+    value_description int64/232 (src/ast_convenience.mli[76,2491+0]..src/ast_convenience.mli[76,2491+58])
+      core_type (src/ast_convenience.mli[76,2491+11]..src/ast_convenience.mli[76,2491+58])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[76,2491+16]..src/ast_convenience.mli[76,2491+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[76,2491+23]..src/ast_convenience.mli[76,2491+58])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[76,2491+30]..src/ast_convenience.mli[76,2491+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[76,2491+39]..src/ast_convenience.mli[76,2491+58])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[76,2491+39]..src/ast_convenience.mli[76,2491+44])
+              Ttyp_constr "int64/13!"
+              []
+            core_type (src/ast_convenience.mli[76,2491+48]..src/ast_convenience.mli[76,2491+58])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[77,2550+0]..src/ast_convenience.mli[77,2550+56])
+    Tsig_value
+    value_description char/233 (src/ast_convenience.mli[77,2550+0]..src/ast_convenience.mli[77,2550+56])
+      core_type (src/ast_convenience.mli[77,2550+10]..src/ast_convenience.mli[77,2550+56])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[77,2550+15]..src/ast_convenience.mli[77,2550+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[77,2550+22]..src/ast_convenience.mli[77,2550+56])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[77,2550+29]..src/ast_convenience.mli[77,2550+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[77,2550+38]..src/ast_convenience.mli[77,2550+56])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[77,2550+38]..src/ast_convenience.mli[77,2550+42])
+              Ttyp_constr "char/2!"
+              []
+            core_type (src/ast_convenience.mli[77,2550+46]..src/ast_convenience.mli[77,2550+56])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[78,2607+0]..src/ast_convenience.mli[78,2607+58])
+    Tsig_value
+    value_description float/234 (src/ast_convenience.mli[78,2607+0]..src/ast_convenience.mli[78,2607+58])
+      core_type (src/ast_convenience.mli[78,2607+11]..src/ast_convenience.mli[78,2607+58])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[78,2607+16]..src/ast_convenience.mli[78,2607+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[78,2607+23]..src/ast_convenience.mli[78,2607+58])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[78,2607+30]..src/ast_convenience.mli[78,2607+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[78,2607+39]..src/ast_convenience.mli[78,2607+58])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[78,2607+39]..src/ast_convenience.mli[78,2607+44])
+              Ttyp_constr "float/4!"
+              []
+            core_type (src/ast_convenience.mli[78,2607+48]..src/ast_convenience.mli[78,2607+58])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[80,2667+0]..src/ast_convenience.mli[80,2667+71])
+    Tsig_value
+    value_description sequence/235 (src/ast_convenience.mli[80,2667+0]..src/ast_convenience.mli[80,2667+71])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_convenience.mli[81,2739+0]..[81,2739+50])
+            Pstr_eval
+            expression (src/ast_convenience.mli[81,2739+0]..[81,2739+50])
+              Pexp_constant PConst_string(" Return [()] if the list is empty. Tail rec. ",None)
+        ]
+      core_type (src/ast_convenience.mli[80,2667+14]..src/ast_convenience.mli[80,2667+71])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[80,2667+19]..src/ast_convenience.mli[80,2667+22])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[80,2667+26]..src/ast_convenience.mli[80,2667+71])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[80,2667+33]..src/ast_convenience.mli[80,2667+38])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[80,2667+42]..src/ast_convenience.mli[80,2667+71])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[80,2667+42]..src/ast_convenience.mli[80,2667+57])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[80,2667+42]..src/ast_convenience.mli[80,2667+52])
+                  Ttyp_constr "Parsetree!.expression"
+                  []
+              ]
+            core_type (src/ast_convenience.mli[80,2667+61]..src/ast_convenience.mli[80,2667+71])
+              Ttyp_constr "Parsetree!.expression"
+              []
+      []
+  signature_item (src/ast_convenience.mli[83,2791+0]..src/ast_convenience.mli[83,2791+19])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[83,2791+0]..[83,2791+19])
+        Pstr_eval
+        expression (src/ast_convenience.mli[83,2791+0]..[83,2791+19])
+          Pexp_constant PConst_string(" {2 Patterns} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[85,2812+0]..src/ast_convenience.mli[85,2812+55])
+    Tsig_value
+    value_description pvar/236 (src/ast_convenience.mli[85,2812+0]..src/ast_convenience.mli[85,2812+55])
+      core_type (src/ast_convenience.mli[85,2812+10]..src/ast_convenience.mli[85,2812+55])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[85,2812+15]..src/ast_convenience.mli[85,2812+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[85,2812+22]..src/ast_convenience.mli[85,2812+55])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[85,2812+29]..src/ast_convenience.mli[85,2812+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[85,2812+38]..src/ast_convenience.mli[85,2812+55])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[85,2812+38]..src/ast_convenience.mli[85,2812+44])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[85,2812+48]..src/ast_convenience.mli[85,2812+55])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[86,2868+0]..src/ast_convenience.mli[86,2868+74])
+    Tsig_value
+    value_description pconstr/237 (src/ast_convenience.mli[86,2868+0]..src/ast_convenience.mli[86,2868+74])
+      core_type (src/ast_convenience.mli[86,2868+13]..src/ast_convenience.mli[86,2868+74])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[86,2868+18]..src/ast_convenience.mli[86,2868+21])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[86,2868+25]..src/ast_convenience.mli[86,2868+74])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[86,2868+32]..src/ast_convenience.mli[86,2868+37])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[86,2868+41]..src/ast_convenience.mli[86,2868+74])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[86,2868+41]..src/ast_convenience.mli[86,2868+47])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[86,2868+51]..src/ast_convenience.mli[86,2868+74])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[86,2868+51]..src/ast_convenience.mli[86,2868+63])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[86,2868+51]..src/ast_convenience.mli[86,2868+58])
+                    Ttyp_constr "Parsetree!.pattern"
+                    []
+                ]
+              core_type (src/ast_convenience.mli[86,2868+67]..src/ast_convenience.mli[86,2868+74])
+                Ttyp_constr "Parsetree!.pattern"
+                []
+      []
+  signature_item (src/ast_convenience.mli[87,2943+0]..src/ast_convenience.mli[87,2943+98])
+    Tsig_value
+    value_description precord/238 (src/ast_convenience.mli[87,2943+0]..src/ast_convenience.mli[87,2943+98])
+      core_type (src/ast_convenience.mli[87,2943+13]..src/ast_convenience.mli[87,2943+98])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[87,2943+18]..src/ast_convenience.mli[87,2943+21])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[87,2943+25]..src/ast_convenience.mli[87,2943+98])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[87,2943+32]..src/ast_convenience.mli[87,2943+37])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[87,2943+41]..src/ast_convenience.mli[87,2943+98])
+            Ttyp_arrow
+            Optional "closed"
+            core_type (src/ast_convenience.mli[87,2943+49]..src/ast_convenience.mli[87,2943+60])
+              Ttyp_constr "Asttypes!.closed_flag"
+              []
+            core_type (src/ast_convenience.mli[87,2943+64]..src/ast_convenience.mli[87,2943+98])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[87,2943+64]..src/ast_convenience.mli[87,2943+87])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[87,2943+65]..src/ast_convenience.mli[87,2943+81])
+                    Ttyp_tuple
+                    [
+                      core_type (src/ast_convenience.mli[87,2943+65]..src/ast_convenience.mli[87,2943+71])
+                        Ttyp_constr "string/15!"
+                        []
+                      core_type (src/ast_convenience.mli[87,2943+74]..src/ast_convenience.mli[87,2943+81])
+                        Ttyp_constr "Parsetree!.pattern"
+                        []
+                    ]
+                ]
+              core_type (src/ast_convenience.mli[87,2943+91]..src/ast_convenience.mli[87,2943+98])
+                Ttyp_constr "Parsetree!.pattern"
+                []
+      []
+  signature_item (src/ast_convenience.mli[88,3042+0]..src/ast_convenience.mli[88,3042+63])
+    Tsig_value
+    value_description ptuple/239 (src/ast_convenience.mli[88,3042+0]..src/ast_convenience.mli[88,3042+63])
+      core_type (src/ast_convenience.mli[88,3042+12]..src/ast_convenience.mli[88,3042+63])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[88,3042+17]..src/ast_convenience.mli[88,3042+20])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[88,3042+24]..src/ast_convenience.mli[88,3042+63])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[88,3042+31]..src/ast_convenience.mli[88,3042+36])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[88,3042+40]..src/ast_convenience.mli[88,3042+63])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[88,3042+40]..src/ast_convenience.mli[88,3042+52])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[88,3042+40]..src/ast_convenience.mli[88,3042+47])
+                  Ttyp_constr "Parsetree!.pattern"
+                  []
+              ]
+            core_type (src/ast_convenience.mli[88,3042+56]..src/ast_convenience.mli[88,3042+63])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[90,3107+0]..src/ast_convenience.mli[90,3107+53])
+    Tsig_value
+    value_description pnil/240 (src/ast_convenience.mli[90,3107+0]..src/ast_convenience.mli[90,3107+53])
+      core_type (src/ast_convenience.mli[90,3107+10]..src/ast_convenience.mli[90,3107+53])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[90,3107+15]..src/ast_convenience.mli[90,3107+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[90,3107+22]..src/ast_convenience.mli[90,3107+53])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[90,3107+29]..src/ast_convenience.mli[90,3107+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[90,3107+38]..src/ast_convenience.mli[90,3107+53])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[90,3107+38]..src/ast_convenience.mli[90,3107+42])
+              Ttyp_constr "unit/6!"
+              []
+            core_type (src/ast_convenience.mli[90,3107+46]..src/ast_convenience.mli[90,3107+53])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[91,3161+0]..src/ast_convenience.mli[91,3161+68])
+    Tsig_value
+    value_description pcons/241 (src/ast_convenience.mli[91,3161+0]..src/ast_convenience.mli[91,3161+68])
+      core_type (src/ast_convenience.mli[91,3161+11]..src/ast_convenience.mli[91,3161+68])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[91,3161+16]..src/ast_convenience.mli[91,3161+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[91,3161+23]..src/ast_convenience.mli[91,3161+68])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[91,3161+30]..src/ast_convenience.mli[91,3161+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[91,3161+39]..src/ast_convenience.mli[91,3161+68])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[91,3161+39]..src/ast_convenience.mli[91,3161+46])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+            core_type (src/ast_convenience.mli[91,3161+50]..src/ast_convenience.mli[91,3161+68])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[91,3161+50]..src/ast_convenience.mli[91,3161+57])
+                Ttyp_constr "Parsetree!.pattern"
+                []
+              core_type (src/ast_convenience.mli[91,3161+61]..src/ast_convenience.mli[91,3161+68])
+                Ttyp_constr "Parsetree!.pattern"
+                []
+      []
+  signature_item (src/ast_convenience.mli[92,3230+0]..src/ast_convenience.mli[92,3230+62])
+    Tsig_value
+    value_description plist/242 (src/ast_convenience.mli[92,3230+0]..src/ast_convenience.mli[92,3230+62])
+      core_type (src/ast_convenience.mli[92,3230+11]..src/ast_convenience.mli[92,3230+62])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[92,3230+16]..src/ast_convenience.mli[92,3230+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[92,3230+23]..src/ast_convenience.mli[92,3230+62])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[92,3230+30]..src/ast_convenience.mli[92,3230+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[92,3230+39]..src/ast_convenience.mli[92,3230+62])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[92,3230+39]..src/ast_convenience.mli[92,3230+51])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/ast_convenience.mli[92,3230+39]..src/ast_convenience.mli[92,3230+46])
+                  Ttyp_constr "Parsetree!.pattern"
+                  []
+              ]
+            core_type (src/ast_convenience.mli[92,3230+55]..src/ast_convenience.mli[92,3230+62])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[94,3294+0]..src/ast_convenience.mli[94,3294+55])
+    Tsig_value
+    value_description pstr/243 (src/ast_convenience.mli[94,3294+0]..src/ast_convenience.mli[94,3294+55])
+      core_type (src/ast_convenience.mli[94,3294+10]..src/ast_convenience.mli[94,3294+55])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[94,3294+15]..src/ast_convenience.mli[94,3294+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[94,3294+22]..src/ast_convenience.mli[94,3294+55])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[94,3294+29]..src/ast_convenience.mli[94,3294+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[94,3294+38]..src/ast_convenience.mli[94,3294+55])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[94,3294+38]..src/ast_convenience.mli[94,3294+44])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[94,3294+48]..src/ast_convenience.mli[94,3294+55])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[95,3350+0]..src/ast_convenience.mli[95,3350+52])
+    Tsig_value
+    value_description pint/244 (src/ast_convenience.mli[95,3350+0]..src/ast_convenience.mli[95,3350+52])
+      core_type (src/ast_convenience.mli[95,3350+10]..src/ast_convenience.mli[95,3350+52])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[95,3350+15]..src/ast_convenience.mli[95,3350+18])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[95,3350+22]..src/ast_convenience.mli[95,3350+52])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[95,3350+29]..src/ast_convenience.mli[95,3350+34])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[95,3350+38]..src/ast_convenience.mli[95,3350+52])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[95,3350+38]..src/ast_convenience.mli[95,3350+41])
+              Ttyp_constr "int/1!"
+              []
+            core_type (src/ast_convenience.mli[95,3350+45]..src/ast_convenience.mli[95,3350+52])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[96,3403+0]..src/ast_convenience.mli[96,3403+54])
+    Tsig_value
+    value_description pchar/245 (src/ast_convenience.mli[96,3403+0]..src/ast_convenience.mli[96,3403+54])
+      core_type (src/ast_convenience.mli[96,3403+11]..src/ast_convenience.mli[96,3403+54])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[96,3403+16]..src/ast_convenience.mli[96,3403+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[96,3403+23]..src/ast_convenience.mli[96,3403+54])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[96,3403+30]..src/ast_convenience.mli[96,3403+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[96,3403+39]..src/ast_convenience.mli[96,3403+54])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[96,3403+39]..src/ast_convenience.mli[96,3403+43])
+              Ttyp_constr "char/2!"
+              []
+            core_type (src/ast_convenience.mli[96,3403+47]..src/ast_convenience.mli[96,3403+54])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[97,3458+0]..src/ast_convenience.mli[97,3458+56])
+    Tsig_value
+    value_description pfloat/246 (src/ast_convenience.mli[97,3458+0]..src/ast_convenience.mli[97,3458+56])
+      core_type (src/ast_convenience.mli[97,3458+12]..src/ast_convenience.mli[97,3458+56])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[97,3458+17]..src/ast_convenience.mli[97,3458+20])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[97,3458+24]..src/ast_convenience.mli[97,3458+56])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[97,3458+31]..src/ast_convenience.mli[97,3458+36])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[97,3458+40]..src/ast_convenience.mli[97,3458+56])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[97,3458+40]..src/ast_convenience.mli[97,3458+45])
+              Ttyp_constr "float/4!"
+              []
+            core_type (src/ast_convenience.mli[97,3458+49]..src/ast_convenience.mli[97,3458+56])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[99,3516+0]..src/ast_convenience.mli[99,3516+54])
+    Tsig_value
+    value_description punit/247 (src/ast_convenience.mli[99,3516+0]..src/ast_convenience.mli[99,3516+54])
+      core_type (src/ast_convenience.mli[99,3516+11]..src/ast_convenience.mli[99,3516+54])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[99,3516+16]..src/ast_convenience.mli[99,3516+19])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[99,3516+23]..src/ast_convenience.mli[99,3516+54])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[99,3516+30]..src/ast_convenience.mli[99,3516+35])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[99,3516+39]..src/ast_convenience.mli[99,3516+54])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[99,3516+39]..src/ast_convenience.mli[99,3516+43])
+              Ttyp_constr "unit/6!"
+              []
+            core_type (src/ast_convenience.mli[99,3516+47]..src/ast_convenience.mli[99,3516+54])
+              Ttyp_constr "Parsetree!.pattern"
+              []
+      []
+  signature_item (src/ast_convenience.mli[102,3573+0]..src/ast_convenience.mli[102,3573+16])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[102,3573+0]..[102,3573+16])
+        Pstr_eval
+        expression (src/ast_convenience.mli[102,3573+0]..[102,3573+16])
+          Pexp_constant PConst_string(" {2 Types} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[104,3591+0]..src/ast_convenience.mli[104,3591+78])
+    Tsig_value
+    value_description tconstr/248 (src/ast_convenience.mli[104,3591+0]..src/ast_convenience.mli[104,3591+78])
+      core_type (src/ast_convenience.mli[104,3591+13]..src/ast_convenience.mli[104,3591+78])
+        Ttyp_arrow
+        Optional "loc"
+        core_type (src/ast_convenience.mli[104,3591+18]..src/ast_convenience.mli[104,3591+21])
+          Ttyp_constr "Ast_helper!.loc"
+          []
+        core_type (src/ast_convenience.mli[104,3591+25]..src/ast_convenience.mli[104,3591+78])
+          Ttyp_arrow
+          Optional "attrs"
+          core_type (src/ast_convenience.mli[104,3591+32]..src/ast_convenience.mli[104,3591+37])
+            Ttyp_constr "Ast_helper!.attrs"
+            []
+          core_type (src/ast_convenience.mli[104,3591+41]..src/ast_convenience.mli[104,3591+78])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/ast_convenience.mli[104,3591+41]..src/ast_convenience.mli[104,3591+47])
+              Ttyp_constr "string/15!"
+              []
+            core_type (src/ast_convenience.mli[104,3591+51]..src/ast_convenience.mli[104,3591+78])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/ast_convenience.mli[104,3591+51]..src/ast_convenience.mli[104,3591+65])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/ast_convenience.mli[104,3591+51]..src/ast_convenience.mli[104,3591+60])
+                    Ttyp_constr "Parsetree!.core_type"
+                    []
+                ]
+              core_type (src/ast_convenience.mli[104,3591+69]..src/ast_convenience.mli[104,3591+78])
+                Ttyp_constr "Parsetree!.core_type"
+                []
+      []
+  signature_item (src/ast_convenience.mli[106,3671+0]..src/ast_convenience.mli[106,3671+29])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_convenience.mli[106,3671+0]..[106,3671+29])
+        Pstr_eval
+        expression (src/ast_convenience.mli[106,3671+0]..[106,3671+29])
+          Pexp_constant PConst_string(" {2 AST deconstruction} ",None)
+    ]
+  signature_item (src/ast_convenience.mli[108,3702+0]..src/ast_convenience.mli[108,3702+40])
+    Tsig_value
+    value_description get_str/249 (src/ast_convenience.mli[108,3702+0]..src/ast_convenience.mli[108,3702+40])
+      core_type (src/ast_convenience.mli[108,3702+13]..src/ast_convenience.mli[108,3702+40])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[108,3702+13]..src/ast_convenience.mli[108,3702+23])
+          Ttyp_constr "Parsetree!.expression"
+          []
+        core_type (src/ast_convenience.mli[108,3702+27]..src/ast_convenience.mli[108,3702+40])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/ast_convenience.mli[108,3702+27]..src/ast_convenience.mli[108,3702+33])
+              Ttyp_constr "string/15!"
+              []
+          ]
+      []
+  signature_item (src/ast_convenience.mli[109,3743+0]..src/ast_convenience.mli[109,3743+83])
+    Tsig_value
+    value_description get_str_with_quotation_delimiter/250 (src/ast_convenience.mli[109,3743+0]..src/ast_convenience.mli[109,3743+83])
+      core_type (src/ast_convenience.mli[109,3743+38]..src/ast_convenience.mli[109,3743+83])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[109,3743+38]..src/ast_convenience.mli[109,3743+48])
+          Ttyp_constr "Parsetree!.expression"
+          []
+        core_type (src/ast_convenience.mli[109,3743+52]..src/ast_convenience.mli[109,3743+83])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/ast_convenience.mli[109,3743+53]..src/ast_convenience.mli[109,3743+75])
+              Ttyp_tuple
+              [
+                core_type (src/ast_convenience.mli[109,3743+53]..src/ast_convenience.mli[109,3743+59])
+                  Ttyp_constr "string/15!"
+                  []
+                core_type (src/ast_convenience.mli[109,3743+62]..src/ast_convenience.mli[109,3743+75])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (src/ast_convenience.mli[109,3743+62]..src/ast_convenience.mli[109,3743+68])
+                      Ttyp_constr "string/15!"
+                      []
+                  ]
+              ]
+          ]
+      []
+  signature_item (src/ast_convenience.mli[110,3827+0]..src/ast_convenience.mli[110,3827+40])
+    Tsig_value
+    value_description get_lid/251 (src/ast_convenience.mli[110,3827+0]..src/ast_convenience.mli[110,3827+40])
+      core_type (src/ast_convenience.mli[110,3827+13]..src/ast_convenience.mli[110,3827+40])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[110,3827+13]..src/ast_convenience.mli[110,3827+23])
+          Ttyp_constr "Parsetree!.expression"
+          []
+        core_type (src/ast_convenience.mli[110,3827+27]..src/ast_convenience.mli[110,3827+40])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/ast_convenience.mli[110,3827+27]..src/ast_convenience.mli[110,3827+33])
+              Ttyp_constr "string/15!"
+              []
+          ]
+      []
+  signature_item (src/ast_convenience.mli[112,3869+0]..src/ast_convenience.mli[112,3869+42])
+    Tsig_value
+    value_description has_attr/252 (src/ast_convenience.mli[112,3869+0]..src/ast_convenience.mli[112,3869+42])
+      core_type (src/ast_convenience.mli[112,3869+14]..src/ast_convenience.mli[112,3869+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[112,3869+14]..src/ast_convenience.mli[112,3869+20])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/ast_convenience.mli[112,3869+24]..src/ast_convenience.mli[112,3869+42])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[112,3869+24]..src/ast_convenience.mli[112,3869+34])
+            Ttyp_constr "Parsetree!.attributes"
+            []
+          core_type (src/ast_convenience.mli[112,3869+38]..src/ast_convenience.mli[112,3869+42])
+            Ttyp_constr "bool/5!"
+            []
+      []
+  signature_item (src/ast_convenience.mli[113,3912+0]..src/ast_convenience.mli[113,3912+53])
+    Tsig_value
+    value_description find_attr/253 (src/ast_convenience.mli[113,3912+0]..src/ast_convenience.mli[113,3912+53])
+      core_type (src/ast_convenience.mli[113,3912+15]..src/ast_convenience.mli[113,3912+53])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[113,3912+15]..src/ast_convenience.mli[113,3912+21])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/ast_convenience.mli[113,3912+25]..src/ast_convenience.mli[113,3912+53])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[113,3912+25]..src/ast_convenience.mli[113,3912+35])
+            Ttyp_constr "Parsetree!.attributes"
+            []
+          core_type (src/ast_convenience.mli[113,3912+39]..src/ast_convenience.mli[113,3912+53])
+            Ttyp_constr "option/10!"
+            [
+              core_type (src/ast_convenience.mli[113,3912+39]..src/ast_convenience.mli[113,3912+46])
+                Ttyp_constr "Parsetree!.payload"
+                []
+            ]
+      []
+  signature_item (src/ast_convenience.mli[114,3966+0]..src/ast_convenience.mli[114,3966+61])
+    Tsig_value
+    value_description find_attr_expr/254 (src/ast_convenience.mli[114,3966+0]..src/ast_convenience.mli[114,3966+61])
+      core_type (src/ast_convenience.mli[114,3966+20]..src/ast_convenience.mli[114,3966+61])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_convenience.mli[114,3966+20]..src/ast_convenience.mli[114,3966+26])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/ast_convenience.mli[114,3966+30]..src/ast_convenience.mli[114,3966+61])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/ast_convenience.mli[114,3966+30]..src/ast_convenience.mli[114,3966+40])
+            Ttyp_constr "Parsetree!.attributes"
+            []
+          core_type (src/ast_convenience.mli[114,3966+44]..src/ast_convenience.mli[114,3966+61])
+            Ttyp_constr "option/10!"
+            [
+              core_type (src/ast_convenience.mli[114,3966+44]..src/ast_convenience.mli[114,3966+54])
+                Ttyp_constr "Parsetree!.expression"
+                []
+            ]
+      []
+]
+

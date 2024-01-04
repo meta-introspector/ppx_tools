@@ -1,0 +1,1269 @@
+[
+  signature_item (src/ast_mapper_class.mli[5,236+0]..[5,236+38])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_mapper_class.mli[5,236+0]..[5,236+38])
+        Pstr_eval
+        expression (src/ast_mapper_class.mli[5,236+0]..[5,236+38])
+          Pexp_constant PConst_string(" Class-based customizable mapper ",None)
+    ]
+  signature_item (src/ast_mapper_class.mli[7,276+0]..[7,276+14])
+    Psig_open Fresh "Parsetree" (src/ast_mapper_class.mli[7,276+5]..[7,276+14])
+  signature_item (src/ast_mapper_class.mli[9,292+0]..[59,3005+5])
+    Psig_class
+    [
+      class_description (src/ast_mapper_class.mli[9,292+0]..[59,3005+5])
+        pci_virt = Concrete
+        pci_params =
+          []
+        pci_name = "mapper" (src/ast_mapper_class.mli[9,292+6]..[9,292+12])
+        pci_expr =
+          class_type (src/ast_mapper_class.mli[10,306+2]..[59,3005+5])
+            Pcty_signature
+            class_signature
+              core_type (src/ast_mapper_class.mli[10,306+8]..[10,306+8])
+                Ptyp_any
+              [
+                class_type_field (src/ast_mapper_class.mli[11,315+4]..[11,315+44])
+                  Pctf_method "attribute" Public Concrete
+                    core_type (src/ast_mapper_class.mli[11,315+22]..[11,315+44])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[11,315+22]..[11,315+31])
+                        Ptyp_constr "attribute" (src/ast_mapper_class.mli[11,315+22]..[11,315+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[11,315+35]..[11,315+44])
+                        Ptyp_constr "attribute" (src/ast_mapper_class.mli[11,315+35]..[11,315+44])
+                        []
+                class_type_field (src/ast_mapper_class.mli[12,360+4]..[12,360+55])
+                  Pctf_method "attributes" Public Concrete
+                    core_type (src/ast_mapper_class.mli[12,360+23]..[12,360+55])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[12,360+23]..[12,360+37])
+                        Ptyp_constr "list" (src/ast_mapper_class.mli[12,360+33]..[12,360+37])
+                        [
+                          core_type (src/ast_mapper_class.mli[12,360+23]..[12,360+32])
+                            Ptyp_constr "attribute" (src/ast_mapper_class.mli[12,360+23]..[12,360+32])
+                            []
+                        ]
+                      core_type (src/ast_mapper_class.mli[12,360+41]..[12,360+55])
+                        Ptyp_constr "list" (src/ast_mapper_class.mli[12,360+51]..[12,360+55])
+                        [
+                          core_type (src/ast_mapper_class.mli[12,360+41]..[12,360+50])
+                            Ptyp_constr "attribute" (src/ast_mapper_class.mli[12,360+41]..[12,360+50])
+                            []
+                        ]
+                class_type_field (src/ast_mapper_class.mli[13,416+4]..[13,416+47])
+                  Pctf_method "binding_op" Public Concrete
+                    core_type (src/ast_mapper_class.mli[13,416+23]..[13,416+47])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[13,416+23]..[13,416+33])
+                        Ptyp_constr "binding_op" (src/ast_mapper_class.mli[13,416+23]..[13,416+33])
+                        []
+                      core_type (src/ast_mapper_class.mli[13,416+37]..[13,416+47])
+                        Ptyp_constr "binding_op" (src/ast_mapper_class.mli[13,416+37]..[13,416+47])
+                        []
+                class_type_field (src/ast_mapper_class.mli[14,464+4]..[14,464+29])
+                  Pctf_method "case" Public Concrete
+                    core_type (src/ast_mapper_class.mli[14,464+17]..[14,464+29])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[14,464+17]..[14,464+21])
+                        Ptyp_constr "case" (src/ast_mapper_class.mli[14,464+17]..[14,464+21])
+                        []
+                      core_type (src/ast_mapper_class.mli[14,464+25]..[14,464+29])
+                        Ptyp_constr "case" (src/ast_mapper_class.mli[14,464+25]..[14,464+29])
+                        []
+                class_type_field (src/ast_mapper_class.mli[15,494+4]..[15,494+40])
+                  Pctf_method "cases" Public Concrete
+                    core_type (src/ast_mapper_class.mli[15,494+18]..[15,494+40])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[15,494+18]..[15,494+27])
+                        Ptyp_constr "list" (src/ast_mapper_class.mli[15,494+23]..[15,494+27])
+                        [
+                          core_type (src/ast_mapper_class.mli[15,494+18]..[15,494+22])
+                            Ptyp_constr "case" (src/ast_mapper_class.mli[15,494+18]..[15,494+22])
+                            []
+                        ]
+                      core_type (src/ast_mapper_class.mli[15,494+31]..[15,494+40])
+                        Ptyp_constr "list" (src/ast_mapper_class.mli[15,494+36]..[15,494+40])
+                        [
+                          core_type (src/ast_mapper_class.mli[15,494+31]..[15,494+35])
+                            Ptyp_constr "case" (src/ast_mapper_class.mli[15,494+31]..[15,494+35])
+                            []
+                        ]
+                class_type_field (src/ast_mapper_class.mli[16,535+4]..[16,535+68])
+                  Pctf_method "class_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[16,535+30]..[16,535+68])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[16,535+30]..[16,535+47])
+                        Ptyp_constr "class_declaration" (src/ast_mapper_class.mli[16,535+30]..[16,535+47])
+                        []
+                      core_type (src/ast_mapper_class.mli[16,535+51]..[16,535+68])
+                        Ptyp_constr "class_declaration" (src/ast_mapper_class.mli[16,535+51]..[16,535+68])
+                        []
+                class_type_field (src/ast_mapper_class.mli[17,604+4]..[17,604+68])
+                  Pctf_method "class_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[17,604+30]..[17,604+68])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[17,604+30]..[17,604+47])
+                        Ptyp_constr "class_description" (src/ast_mapper_class.mli[17,604+30]..[17,604+47])
+                        []
+                      core_type (src/ast_mapper_class.mli[17,604+51]..[17,604+68])
+                        Ptyp_constr "class_description" (src/ast_mapper_class.mli[17,604+51]..[17,604+68])
+                        []
+                class_type_field (src/ast_mapper_class.mli[18,673+4]..[18,673+47])
+                  Pctf_method "class_expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[18,673+23]..[18,673+47])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[18,673+23]..[18,673+33])
+                        Ptyp_constr "class_expr" (src/ast_mapper_class.mli[18,673+23]..[18,673+33])
+                        []
+                      core_type (src/ast_mapper_class.mli[18,673+37]..[18,673+47])
+                        Ptyp_constr "class_expr" (src/ast_mapper_class.mli[18,673+37]..[18,673+47])
+                        []
+                class_type_field (src/ast_mapper_class.mli[19,721+4]..[19,721+50])
+                  Pctf_method "class_field" Public Concrete
+                    core_type (src/ast_mapper_class.mli[19,721+24]..[19,721+50])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[19,721+24]..[19,721+35])
+                        Ptyp_constr "class_field" (src/ast_mapper_class.mli[19,721+24]..[19,721+35])
+                        []
+                      core_type (src/ast_mapper_class.mli[19,721+39]..[19,721+50])
+                        Ptyp_constr "class_field" (src/ast_mapper_class.mli[19,721+39]..[19,721+50])
+                        []
+                class_type_field (src/ast_mapper_class.mli[20,772+4]..[20,772+62])
+                  Pctf_method "class_signature" Public Concrete
+                    core_type (src/ast_mapper_class.mli[20,772+28]..[20,772+62])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[20,772+28]..[20,772+43])
+                        Ptyp_constr "class_signature" (src/ast_mapper_class.mli[20,772+28]..[20,772+43])
+                        []
+                      core_type (src/ast_mapper_class.mli[20,772+47]..[20,772+62])
+                        Ptyp_constr "class_signature" (src/ast_mapper_class.mli[20,772+47]..[20,772+62])
+                        []
+                class_type_field (src/ast_mapper_class.mli[21,835+4]..[21,835+62])
+                  Pctf_method "class_structure" Public Concrete
+                    core_type (src/ast_mapper_class.mli[21,835+28]..[21,835+62])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[21,835+28]..[21,835+43])
+                        Ptyp_constr "class_structure" (src/ast_mapper_class.mli[21,835+28]..[21,835+43])
+                        []
+                      core_type (src/ast_mapper_class.mli[21,835+47]..[21,835+62])
+                        Ptyp_constr "class_structure" (src/ast_mapper_class.mli[21,835+47]..[21,835+62])
+                        []
+                class_type_field (src/ast_mapper_class.mli[22,898+4]..[22,898+47])
+                  Pctf_method "class_type" Public Concrete
+                    core_type (src/ast_mapper_class.mli[22,898+23]..[22,898+47])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[22,898+23]..[22,898+33])
+                        Ptyp_constr "class_type" (src/ast_mapper_class.mli[22,898+23]..[22,898+33])
+                        []
+                      core_type (src/ast_mapper_class.mli[22,898+37]..[22,898+47])
+                        Ptyp_constr "class_type" (src/ast_mapper_class.mli[22,898+37]..[22,898+47])
+                        []
+                class_type_field (src/ast_mapper_class.mli[23,946+4]..[23,946+83])
+                  Pctf_method "class_type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[23,946+35]..[23,946+83])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[23,946+35]..[23,946+57])
+                        Ptyp_constr "class_type_declaration" (src/ast_mapper_class.mli[23,946+35]..[23,946+57])
+                        []
+                      core_type (src/ast_mapper_class.mli[23,946+61]..[23,946+83])
+                        Ptyp_constr "class_type_declaration" (src/ast_mapper_class.mli[23,946+61]..[23,946+83])
+                        []
+                class_type_field (src/ast_mapper_class.mli[24,1030+4]..[24,1030+65])
+                  Pctf_method "class_type_field" Public Concrete
+                    core_type (src/ast_mapper_class.mli[24,1030+29]..[24,1030+65])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[24,1030+29]..[24,1030+45])
+                        Ptyp_constr "class_type_field" (src/ast_mapper_class.mli[24,1030+29]..[24,1030+45])
+                        []
+                      core_type (src/ast_mapper_class.mli[24,1030+49]..[24,1030+65])
+                        Ptyp_constr "class_type_field" (src/ast_mapper_class.mli[24,1030+49]..[24,1030+65])
+                        []
+                class_type_field (src/ast_mapper_class.mli[28,1133+4]..[28,1133+80])
+                  Pctf_method "constructor_arguments" Public Concrete
+                    core_type (src/ast_mapper_class.mli[28,1133+34]..[28,1133+80])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[28,1133+34]..[28,1133+55])
+                        Ptyp_constr "constructor_arguments" (src/ast_mapper_class.mli[28,1133+34]..[28,1133+55])
+                        []
+                      core_type (src/ast_mapper_class.mli[28,1133+59]..[28,1133+80])
+                        Ptyp_constr "constructor_arguments" (src/ast_mapper_class.mli[28,1133+59]..[28,1133+80])
+                        []
+                class_type_field (src/ast_mapper_class.mli[29,1214+4]..[29,1214+86])
+                  Pctf_method "constructor_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[29,1214+36]..[29,1214+86])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[29,1214+36]..[29,1214+59])
+                        Ptyp_constr "constructor_declaration" (src/ast_mapper_class.mli[29,1214+36]..[29,1214+59])
+                        []
+                      core_type (src/ast_mapper_class.mli[29,1214+63]..[29,1214+86])
+                        Ptyp_constr "constructor_declaration" (src/ast_mapper_class.mli[29,1214+63]..[29,1214+86])
+                        []
+                class_type_field (src/ast_mapper_class.mli[30,1301+4]..[30,1301+41])
+                  Pctf_method "expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[30,1301+17]..[30,1301+41])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[30,1301+17]..[30,1301+27])
+                        Ptyp_constr "expression" (src/ast_mapper_class.mli[30,1301+17]..[30,1301+27])
+                        []
+                      core_type (src/ast_mapper_class.mli[30,1301+31]..[30,1301+41])
+                        Ptyp_constr "expression" (src/ast_mapper_class.mli[30,1301+31]..[30,1301+41])
+                        []
+                class_type_field (src/ast_mapper_class.mli[31,1343+4]..[31,1343+44])
+                  Pctf_method "extension" Public Concrete
+                    core_type (src/ast_mapper_class.mli[31,1343+22]..[31,1343+44])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[31,1343+22]..[31,1343+31])
+                        Ptyp_constr "extension" (src/ast_mapper_class.mli[31,1343+22]..[31,1343+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[31,1343+35]..[31,1343+44])
+                        Ptyp_constr "extension" (src/ast_mapper_class.mli[31,1343+35]..[31,1343+44])
+                        []
+                class_type_field (src/ast_mapper_class.mli[32,1388+4]..[32,1388+80])
+                  Pctf_method "extension_constructor" Public Concrete
+                    core_type (src/ast_mapper_class.mli[32,1388+34]..[32,1388+80])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[32,1388+34]..[32,1388+55])
+                        Ptyp_constr "extension_constructor" (src/ast_mapper_class.mli[32,1388+34]..[32,1388+55])
+                        []
+                      core_type (src/ast_mapper_class.mli[32,1388+59]..[32,1388+80])
+                        Ptyp_constr "extension_constructor" (src/ast_mapper_class.mli[32,1388+59]..[32,1388+80])
+                        []
+                class_type_field (src/ast_mapper_class.mli[33,1469+4]..[33,1469+74])
+                  Pctf_method "include_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[33,1469+32]..[33,1469+74])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[33,1469+32]..[33,1469+51])
+                        Ptyp_constr "include_declaration" (src/ast_mapper_class.mli[33,1469+32]..[33,1469+51])
+                        []
+                      core_type (src/ast_mapper_class.mli[33,1469+55]..[33,1469+74])
+                        Ptyp_constr "include_declaration" (src/ast_mapper_class.mli[33,1469+55]..[33,1469+74])
+                        []
+                class_type_field (src/ast_mapper_class.mli[34,1544+4]..[34,1544+74])
+                  Pctf_method "include_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[34,1544+32]..[34,1544+74])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[34,1544+32]..[34,1544+51])
+                        Ptyp_constr "include_description" (src/ast_mapper_class.mli[34,1544+32]..[34,1544+51])
+                        []
+                      core_type (src/ast_mapper_class.mli[34,1544+55]..[34,1544+74])
+                        Ptyp_constr "include_description" (src/ast_mapper_class.mli[34,1544+55]..[34,1544+74])
+                        []
+                class_type_field (src/ast_mapper_class.mli[35,1619+4]..[35,1619+68])
+                  Pctf_method "label_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[35,1619+30]..[35,1619+68])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[35,1619+30]..[35,1619+47])
+                        Ptyp_constr "label_declaration" (src/ast_mapper_class.mli[35,1619+30]..[35,1619+47])
+                        []
+                      core_type (src/ast_mapper_class.mli[35,1619+51]..[35,1619+68])
+                        Ptyp_constr "label_declaration" (src/ast_mapper_class.mli[35,1619+51]..[35,1619+68])
+                        []
+                class_type_field (src/ast_mapper_class.mli[36,1688+4]..[36,1688+45])
+                  Pctf_method "location" Public Concrete
+                    core_type (src/ast_mapper_class.mli[36,1688+21]..[36,1688+45])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[36,1688+21]..[36,1688+31])
+                        Ptyp_constr "Location.t" (src/ast_mapper_class.mli[36,1688+21]..[36,1688+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[36,1688+35]..[36,1688+45])
+                        Ptyp_constr "Location.t" (src/ast_mapper_class.mli[36,1688+35]..[36,1688+45])
+                        []
+                class_type_field (src/ast_mapper_class.mli[37,1734+4]..[37,1734+59])
+                  Pctf_method "module_binding" Public Concrete
+                    core_type (src/ast_mapper_class.mli[37,1734+27]..[37,1734+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[37,1734+27]..[37,1734+41])
+                        Ptyp_constr "module_binding" (src/ast_mapper_class.mli[37,1734+27]..[37,1734+41])
+                        []
+                      core_type (src/ast_mapper_class.mli[37,1734+45]..[37,1734+59])
+                        Ptyp_constr "module_binding" (src/ast_mapper_class.mli[37,1734+45]..[37,1734+59])
+                        []
+                class_type_field (src/ast_mapper_class.mli[38,1794+4]..[38,1794+71])
+                  Pctf_method "module_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[38,1794+31]..[38,1794+71])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[38,1794+31]..[38,1794+49])
+                        Ptyp_constr "module_declaration" (src/ast_mapper_class.mli[38,1794+31]..[38,1794+49])
+                        []
+                      core_type (src/ast_mapper_class.mli[38,1794+53]..[38,1794+71])
+                        Ptyp_constr "module_declaration" (src/ast_mapper_class.mli[38,1794+53]..[38,1794+71])
+                        []
+                class_type_field (src/ast_mapper_class.mli[39,1866+4]..[39,1866+74])
+                  Pctf_method "module_substitution" Public Concrete
+                    core_type (src/ast_mapper_class.mli[39,1866+32]..[39,1866+74])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[39,1866+32]..[39,1866+51])
+                        Ptyp_constr "module_substitution" (src/ast_mapper_class.mli[39,1866+32]..[39,1866+51])
+                        []
+                      core_type (src/ast_mapper_class.mli[39,1866+55]..[39,1866+74])
+                        Ptyp_constr "module_substitution" (src/ast_mapper_class.mli[39,1866+55]..[39,1866+74])
+                        []
+                class_type_field (src/ast_mapper_class.mli[40,1941+4]..[40,1941+50])
+                  Pctf_method "module_expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[40,1941+24]..[40,1941+50])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[40,1941+24]..[40,1941+35])
+                        Ptyp_constr "module_expr" (src/ast_mapper_class.mli[40,1941+24]..[40,1941+35])
+                        []
+                      core_type (src/ast_mapper_class.mli[40,1941+39]..[40,1941+50])
+                        Ptyp_constr "module_expr" (src/ast_mapper_class.mli[40,1941+39]..[40,1941+50])
+                        []
+                class_type_field (src/ast_mapper_class.mli[41,1992+4]..[41,1992+50])
+                  Pctf_method "module_type" Public Concrete
+                    core_type (src/ast_mapper_class.mli[41,1992+24]..[41,1992+50])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[41,1992+24]..[41,1992+35])
+                        Ptyp_constr "module_type" (src/ast_mapper_class.mli[41,1992+24]..[41,1992+35])
+                        []
+                      core_type (src/ast_mapper_class.mli[41,1992+39]..[41,1992+50])
+                        Ptyp_constr "module_type" (src/ast_mapper_class.mli[41,1992+39]..[41,1992+50])
+                        []
+                class_type_field (src/ast_mapper_class.mli[42,2043+4]..[42,2043+86])
+                  Pctf_method "module_type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[42,2043+36]..[42,2043+86])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[42,2043+36]..[42,2043+59])
+                        Ptyp_constr "module_type_declaration" (src/ast_mapper_class.mli[42,2043+36]..[42,2043+59])
+                        []
+                      core_type (src/ast_mapper_class.mli[42,2043+63]..[42,2043+86])
+                        Ptyp_constr "module_type_declaration" (src/ast_mapper_class.mli[42,2043+63]..[42,2043+86])
+                        []
+                class_type_field (src/ast_mapper_class.mli[43,2130+4]..[43,2130+65])
+                  Pctf_method "open_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[43,2130+29]..[43,2130+65])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[43,2130+29]..[43,2130+45])
+                        Ptyp_constr "open_declaration" (src/ast_mapper_class.mli[43,2130+29]..[43,2130+45])
+                        []
+                      core_type (src/ast_mapper_class.mli[43,2130+49]..[43,2130+65])
+                        Ptyp_constr "open_declaration" (src/ast_mapper_class.mli[43,2130+49]..[43,2130+65])
+                        []
+                class_type_field (src/ast_mapper_class.mli[44,2196+4]..[44,2196+65])
+                  Pctf_method "open_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[44,2196+29]..[44,2196+65])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[44,2196+29]..[44,2196+45])
+                        Ptyp_constr "open_description" (src/ast_mapper_class.mli[44,2196+29]..[44,2196+45])
+                        []
+                      core_type (src/ast_mapper_class.mli[44,2196+49]..[44,2196+65])
+                        Ptyp_constr "open_description" (src/ast_mapper_class.mli[44,2196+49]..[44,2196+65])
+                        []
+                class_type_field (src/ast_mapper_class.mli[45,2262+4]..[45,2262+34])
+                  Pctf_method "pat" Public Concrete
+                    core_type (src/ast_mapper_class.mli[45,2262+16]..[45,2262+34])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[45,2262+16]..[45,2262+23])
+                        Ptyp_constr "pattern" (src/ast_mapper_class.mli[45,2262+16]..[45,2262+23])
+                        []
+                      core_type (src/ast_mapper_class.mli[45,2262+27]..[45,2262+34])
+                        Ptyp_constr "pattern" (src/ast_mapper_class.mli[45,2262+27]..[45,2262+34])
+                        []
+                class_type_field (src/ast_mapper_class.mli[46,2297+4]..[46,2297+38])
+                  Pctf_method "payload" Public Concrete
+                    core_type (src/ast_mapper_class.mli[46,2297+20]..[46,2297+38])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[46,2297+20]..[46,2297+27])
+                        Ptyp_constr "payload" (src/ast_mapper_class.mli[46,2297+20]..[46,2297+27])
+                        []
+                      core_type (src/ast_mapper_class.mli[46,2297+31]..[46,2297+38])
+                        Ptyp_constr "payload" (src/ast_mapper_class.mli[46,2297+31]..[46,2297+38])
+                        []
+                class_type_field (src/ast_mapper_class.mli[47,2336+4]..[47,2336+44])
+                  Pctf_method "signature" Public Concrete
+                    core_type (src/ast_mapper_class.mli[47,2336+22]..[47,2336+44])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[47,2336+22]..[47,2336+31])
+                        Ptyp_constr "signature" (src/ast_mapper_class.mli[47,2336+22]..[47,2336+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[47,2336+35]..[47,2336+44])
+                        Ptyp_constr "signature" (src/ast_mapper_class.mli[47,2336+35]..[47,2336+44])
+                        []
+                class_type_field (src/ast_mapper_class.mli[48,2381+4]..[48,2381+59])
+                  Pctf_method "signature_item" Public Concrete
+                    core_type (src/ast_mapper_class.mli[48,2381+27]..[48,2381+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[48,2381+27]..[48,2381+41])
+                        Ptyp_constr "signature_item" (src/ast_mapper_class.mli[48,2381+27]..[48,2381+41])
+                        []
+                      core_type (src/ast_mapper_class.mli[48,2381+45]..[48,2381+59])
+                        Ptyp_constr "signature_item" (src/ast_mapper_class.mli[48,2381+45]..[48,2381+59])
+                        []
+                class_type_field (src/ast_mapper_class.mli[49,2441+4]..[49,2441+44])
+                  Pctf_method "structure" Public Concrete
+                    core_type (src/ast_mapper_class.mli[49,2441+22]..[49,2441+44])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[49,2441+22]..[49,2441+31])
+                        Ptyp_constr "structure" (src/ast_mapper_class.mli[49,2441+22]..[49,2441+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[49,2441+35]..[49,2441+44])
+                        Ptyp_constr "structure" (src/ast_mapper_class.mli[49,2441+35]..[49,2441+44])
+                        []
+                class_type_field (src/ast_mapper_class.mli[50,2486+4]..[50,2486+59])
+                  Pctf_method "structure_item" Public Concrete
+                    core_type (src/ast_mapper_class.mli[50,2486+27]..[50,2486+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[50,2486+27]..[50,2486+41])
+                        Ptyp_constr "structure_item" (src/ast_mapper_class.mli[50,2486+27]..[50,2486+41])
+                        []
+                      core_type (src/ast_mapper_class.mli[50,2486+45]..[50,2486+59])
+                        Ptyp_constr "structure_item" (src/ast_mapper_class.mli[50,2486+45]..[50,2486+59])
+                        []
+                class_type_field (src/ast_mapper_class.mli[51,2546+4]..[51,2546+38])
+                  Pctf_method "typ" Public Concrete
+                    core_type (src/ast_mapper_class.mli[51,2546+16]..[51,2546+38])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[51,2546+16]..[51,2546+25])
+                        Ptyp_constr "core_type" (src/ast_mapper_class.mli[51,2546+16]..[51,2546+25])
+                        []
+                      core_type (src/ast_mapper_class.mli[51,2546+29]..[51,2546+38])
+                        Ptyp_constr "core_type" (src/ast_mapper_class.mli[51,2546+29]..[51,2546+38])
+                        []
+                class_type_field (src/ast_mapper_class.mli[52,2585+4]..[52,2585+65])
+                  Pctf_method "type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[52,2585+29]..[52,2585+65])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[52,2585+29]..[52,2585+45])
+                        Ptyp_constr "type_declaration" (src/ast_mapper_class.mli[52,2585+29]..[52,2585+45])
+                        []
+                      core_type (src/ast_mapper_class.mli[52,2585+49]..[52,2585+65])
+                        Ptyp_constr "type_declaration" (src/ast_mapper_class.mli[52,2585+49]..[52,2585+65])
+                        []
+                class_type_field (src/ast_mapper_class.mli[53,2651+4]..[53,2651+59])
+                  Pctf_method "type_exception" Public Concrete
+                    core_type (src/ast_mapper_class.mli[53,2651+27]..[53,2651+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[53,2651+27]..[53,2651+41])
+                        Ptyp_constr "type_exception" (src/ast_mapper_class.mli[53,2651+27]..[53,2651+41])
+                        []
+                      core_type (src/ast_mapper_class.mli[53,2651+45]..[53,2651+59])
+                        Ptyp_constr "type_exception" (src/ast_mapper_class.mli[53,2651+45]..[53,2651+59])
+                        []
+                class_type_field (src/ast_mapper_class.mli[54,2711+4]..[54,2711+59])
+                  Pctf_method "type_extension" Public Concrete
+                    core_type (src/ast_mapper_class.mli[54,2711+27]..[54,2711+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[54,2711+27]..[54,2711+41])
+                        Ptyp_constr "type_extension" (src/ast_mapper_class.mli[54,2711+27]..[54,2711+41])
+                        []
+                      core_type (src/ast_mapper_class.mli[54,2711+45]..[54,2711+59])
+                        Ptyp_constr "type_extension" (src/ast_mapper_class.mli[54,2711+45]..[54,2711+59])
+                        []
+                class_type_field (src/ast_mapper_class.mli[55,2771+4]..[55,2771+44])
+                  Pctf_method "type_kind" Public Concrete
+                    core_type (src/ast_mapper_class.mli[55,2771+22]..[55,2771+44])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[55,2771+22]..[55,2771+31])
+                        Ptyp_constr "type_kind" (src/ast_mapper_class.mli[55,2771+22]..[55,2771+31])
+                        []
+                      core_type (src/ast_mapper_class.mli[55,2771+35]..[55,2771+44])
+                        Ptyp_constr "type_kind" (src/ast_mapper_class.mli[55,2771+35]..[55,2771+44])
+                        []
+                class_type_field (src/ast_mapper_class.mli[56,2816+4]..[56,2816+56])
+                  Pctf_method "value_binding" Public Concrete
+                    core_type (src/ast_mapper_class.mli[56,2816+26]..[56,2816+56])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[56,2816+26]..[56,2816+39])
+                        Ptyp_constr "value_binding" (src/ast_mapper_class.mli[56,2816+26]..[56,2816+39])
+                        []
+                      core_type (src/ast_mapper_class.mli[56,2816+43]..[56,2816+56])
+                        Ptyp_constr "value_binding" (src/ast_mapper_class.mli[56,2816+43]..[56,2816+56])
+                        []
+                class_type_field (src/ast_mapper_class.mli[57,2873+4]..[57,2873+68])
+                  Pctf_method "value_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[57,2873+30]..[57,2873+68])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[57,2873+30]..[57,2873+47])
+                        Ptyp_constr "value_description" (src/ast_mapper_class.mli[57,2873+30]..[57,2873+47])
+                        []
+                      core_type (src/ast_mapper_class.mli[57,2873+51]..[57,2873+68])
+                        Ptyp_constr "value_description" (src/ast_mapper_class.mli[57,2873+51]..[57,2873+68])
+                        []
+                class_type_field (src/ast_mapper_class.mli[58,2942+4]..[58,2942+62])
+                  Pctf_method "with_constraint" Public Concrete
+                    core_type (src/ast_mapper_class.mli[58,2942+28]..[58,2942+62])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/ast_mapper_class.mli[58,2942+28]..[58,2942+43])
+                        Ptyp_constr "with_constraint" (src/ast_mapper_class.mli[58,2942+28]..[58,2942+43])
+                        []
+                      core_type (src/ast_mapper_class.mli[58,2942+47]..[58,2942+62])
+                        Ptyp_constr "with_constraint" (src/ast_mapper_class.mli[58,2942+47]..[58,2942+62])
+                        []
+              ]
+    ]
+  signature_item (src/ast_mapper_class.mli[61,3012+0]..[61,3012+43])
+    Psig_value
+    value_description "to_mapper" (src/ast_mapper_class.mli[61,3012+4]..[61,3012+13]) (src/ast_mapper_class.mli[61,3012+0]..[61,3012+43])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_mapper_class.mli[62,3056+0]..[63,3114+28])
+            Pstr_eval
+            expression (src/ast_mapper_class.mli[62,3056+0]..[63,3114+28])
+              Pexp_constant PConst_string(" The resulting mapper is \"closed\", i.e. methods ignore\n    their first argument. ",None)
+        ]
+      core_type (src/ast_mapper_class.mli[61,3012+15]..[61,3012+43])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/ast_mapper_class.mli[61,3012+15]..[61,3012+22])
+          Ptyp_class "mapper" (src/ast_mapper_class.mli[61,3012+16]..[61,3012+22])
+          []
+        core_type (src/ast_mapper_class.mli[61,3012+26]..[61,3012+43])
+          Ptyp_constr "Ast_mapper.mapper" (src/ast_mapper_class.mli[61,3012+26]..[61,3012+43])
+          []
+      []
+]
+
+[@@@ocaml.text " Class-based customizable mapper "]
+open Parsetree
+class mapper :
+  object
+    method  attribute : attribute -> attribute
+    method  attributes : attribute list -> attribute list
+    method  binding_op : binding_op -> binding_op
+    method  case : case -> case
+    method  cases : case list -> case list
+    method  class_declaration : class_declaration -> class_declaration
+    method  class_description : class_description -> class_description
+    method  class_expr : class_expr -> class_expr
+    method  class_field : class_field -> class_field
+    method  class_signature : class_signature -> class_signature
+    method  class_structure : class_structure -> class_structure
+    method  class_type : class_type -> class_type
+    method  class_type_declaration :
+      class_type_declaration -> class_type_declaration
+    method  class_type_field : class_type_field -> class_type_field
+    method  constructor_arguments :
+      constructor_arguments -> constructor_arguments
+    method  constructor_declaration :
+      constructor_declaration -> constructor_declaration
+    method  expr : expression -> expression
+    method  extension : extension -> extension
+    method  extension_constructor :
+      extension_constructor -> extension_constructor
+    method  include_declaration : include_declaration -> include_declaration
+    method  include_description : include_description -> include_description
+    method  label_declaration : label_declaration -> label_declaration
+    method  location : Location.t -> Location.t
+    method  module_binding : module_binding -> module_binding
+    method  module_declaration : module_declaration -> module_declaration
+    method  module_substitution : module_substitution -> module_substitution
+    method  module_expr : module_expr -> module_expr
+    method  module_type : module_type -> module_type
+    method  module_type_declaration :
+      module_type_declaration -> module_type_declaration
+    method  open_declaration : open_declaration -> open_declaration
+    method  open_description : open_description -> open_description
+    method  pat : pattern -> pattern
+    method  payload : payload -> payload
+    method  signature : signature -> signature
+    method  signature_item : signature_item -> signature_item
+    method  structure : structure -> structure
+    method  structure_item : structure_item -> structure_item
+    method  typ : core_type -> core_type
+    method  type_declaration : type_declaration -> type_declaration
+    method  type_exception : type_exception -> type_exception
+    method  type_extension : type_extension -> type_extension
+    method  type_kind : type_kind -> type_kind
+    method  value_binding : value_binding -> value_binding
+    method  value_description : value_description -> value_description
+    method  with_constraint : with_constraint -> with_constraint
+  end
+val to_mapper : #mapper -> Ast_mapper.mapper[@@ocaml.doc
+                                              " The resulting mapper is \"closed\", i.e. methods ignore\n    their first argument. "]
+[
+  signature_item (src/ast_mapper_class.mli[5,236+0]..src/ast_mapper_class.mli[5,236+38])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/ast_mapper_class.mli[5,236+0]..[5,236+38])
+        Pstr_eval
+        expression (src/ast_mapper_class.mli[5,236+0]..[5,236+38])
+          Pexp_constant PConst_string(" Class-based customizable mapper ",None)
+    ]
+  signature_item (src/ast_mapper_class.mli[7,276+0]..src/ast_mapper_class.mli[7,276+14])
+    Tsig_open Fresh "Parsetree!"
+  signature_item (src/ast_mapper_class.mli[9,292+0]..src/ast_mapper_class.mli[59,3005+5])
+    Tsig_class
+    [
+      class_description (src/ast_mapper_class.mli[9,292+0]..src/ast_mapper_class.mli[59,3005+5])
+        pci_virt = Concrete
+        pci_params =
+          []
+        pci_name = "mapper"
+        pci_expr =
+          class_type (src/ast_mapper_class.mli[10,306+2]..src/ast_mapper_class.mli[59,3005+5])
+            Tcty_signature
+            class_signature
+              core_type (src/ast_mapper_class.mli[10,306+8]..src/ast_mapper_class.mli[10,306+8])
+                Ttyp_any
+              [
+                class_type_field (src/ast_mapper_class.mli[11,315+4]..src/ast_mapper_class.mli[11,315+44])
+                  Tctf_method "attribute" Public Concrete
+                    core_type (src/ast_mapper_class.mli[11,315+4]..src/ast_mapper_class.mli[11,315+44])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[11,315+22]..src/ast_mapper_class.mli[11,315+44])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[11,315+22]..src/ast_mapper_class.mli[11,315+31])
+                          Ttyp_constr "Parsetree!.attribute"
+                          []
+                        core_type (src/ast_mapper_class.mli[11,315+35]..src/ast_mapper_class.mli[11,315+44])
+                          Ttyp_constr "Parsetree!.attribute"
+                          []
+                class_type_field (src/ast_mapper_class.mli[12,360+4]..src/ast_mapper_class.mli[12,360+55])
+                  Tctf_method "attributes" Public Concrete
+                    core_type (src/ast_mapper_class.mli[12,360+4]..src/ast_mapper_class.mli[12,360+55])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[12,360+23]..src/ast_mapper_class.mli[12,360+55])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[12,360+23]..src/ast_mapper_class.mli[12,360+37])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (src/ast_mapper_class.mli[12,360+23]..src/ast_mapper_class.mli[12,360+32])
+                              Ttyp_constr "Parsetree!.attribute"
+                              []
+                          ]
+                        core_type (src/ast_mapper_class.mli[12,360+41]..src/ast_mapper_class.mli[12,360+55])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (src/ast_mapper_class.mli[12,360+41]..src/ast_mapper_class.mli[12,360+50])
+                              Ttyp_constr "Parsetree!.attribute"
+                              []
+                          ]
+                class_type_field (src/ast_mapper_class.mli[13,416+4]..src/ast_mapper_class.mli[13,416+47])
+                  Tctf_method "binding_op" Public Concrete
+                    core_type (src/ast_mapper_class.mli[13,416+4]..src/ast_mapper_class.mli[13,416+47])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[13,416+23]..src/ast_mapper_class.mli[13,416+47])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[13,416+23]..src/ast_mapper_class.mli[13,416+33])
+                          Ttyp_constr "Parsetree!.binding_op"
+                          []
+                        core_type (src/ast_mapper_class.mli[13,416+37]..src/ast_mapper_class.mli[13,416+47])
+                          Ttyp_constr "Parsetree!.binding_op"
+                          []
+                class_type_field (src/ast_mapper_class.mli[14,464+4]..src/ast_mapper_class.mli[14,464+29])
+                  Tctf_method "case" Public Concrete
+                    core_type (src/ast_mapper_class.mli[14,464+4]..src/ast_mapper_class.mli[14,464+29])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[14,464+17]..src/ast_mapper_class.mli[14,464+29])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[14,464+17]..src/ast_mapper_class.mli[14,464+21])
+                          Ttyp_constr "Parsetree!.case"
+                          []
+                        core_type (src/ast_mapper_class.mli[14,464+25]..src/ast_mapper_class.mli[14,464+29])
+                          Ttyp_constr "Parsetree!.case"
+                          []
+                class_type_field (src/ast_mapper_class.mli[15,494+4]..src/ast_mapper_class.mli[15,494+40])
+                  Tctf_method "cases" Public Concrete
+                    core_type (src/ast_mapper_class.mli[15,494+4]..src/ast_mapper_class.mli[15,494+40])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[15,494+18]..src/ast_mapper_class.mli[15,494+40])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[15,494+18]..src/ast_mapper_class.mli[15,494+27])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (src/ast_mapper_class.mli[15,494+18]..src/ast_mapper_class.mli[15,494+22])
+                              Ttyp_constr "Parsetree!.case"
+                              []
+                          ]
+                        core_type (src/ast_mapper_class.mli[15,494+31]..src/ast_mapper_class.mli[15,494+40])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (src/ast_mapper_class.mli[15,494+31]..src/ast_mapper_class.mli[15,494+35])
+                              Ttyp_constr "Parsetree!.case"
+                              []
+                          ]
+                class_type_field (src/ast_mapper_class.mli[16,535+4]..src/ast_mapper_class.mli[16,535+68])
+                  Tctf_method "class_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[16,535+4]..src/ast_mapper_class.mli[16,535+68])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[16,535+30]..src/ast_mapper_class.mli[16,535+68])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[16,535+30]..src/ast_mapper_class.mli[16,535+47])
+                          Ttyp_constr "Parsetree!.class_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[16,535+51]..src/ast_mapper_class.mli[16,535+68])
+                          Ttyp_constr "Parsetree!.class_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[17,604+4]..src/ast_mapper_class.mli[17,604+68])
+                  Tctf_method "class_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[17,604+4]..src/ast_mapper_class.mli[17,604+68])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[17,604+30]..src/ast_mapper_class.mli[17,604+68])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[17,604+30]..src/ast_mapper_class.mli[17,604+47])
+                          Ttyp_constr "Parsetree!.class_description"
+                          []
+                        core_type (src/ast_mapper_class.mli[17,604+51]..src/ast_mapper_class.mli[17,604+68])
+                          Ttyp_constr "Parsetree!.class_description"
+                          []
+                class_type_field (src/ast_mapper_class.mli[18,673+4]..src/ast_mapper_class.mli[18,673+47])
+                  Tctf_method "class_expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[18,673+4]..src/ast_mapper_class.mli[18,673+47])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[18,673+23]..src/ast_mapper_class.mli[18,673+47])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[18,673+23]..src/ast_mapper_class.mli[18,673+33])
+                          Ttyp_constr "Parsetree!.class_expr"
+                          []
+                        core_type (src/ast_mapper_class.mli[18,673+37]..src/ast_mapper_class.mli[18,673+47])
+                          Ttyp_constr "Parsetree!.class_expr"
+                          []
+                class_type_field (src/ast_mapper_class.mli[19,721+4]..src/ast_mapper_class.mli[19,721+50])
+                  Tctf_method "class_field" Public Concrete
+                    core_type (src/ast_mapper_class.mli[19,721+4]..src/ast_mapper_class.mli[19,721+50])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[19,721+24]..src/ast_mapper_class.mli[19,721+50])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[19,721+24]..src/ast_mapper_class.mli[19,721+35])
+                          Ttyp_constr "Parsetree!.class_field"
+                          []
+                        core_type (src/ast_mapper_class.mli[19,721+39]..src/ast_mapper_class.mli[19,721+50])
+                          Ttyp_constr "Parsetree!.class_field"
+                          []
+                class_type_field (src/ast_mapper_class.mli[20,772+4]..src/ast_mapper_class.mli[20,772+62])
+                  Tctf_method "class_signature" Public Concrete
+                    core_type (src/ast_mapper_class.mli[20,772+4]..src/ast_mapper_class.mli[20,772+62])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[20,772+28]..src/ast_mapper_class.mli[20,772+62])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[20,772+28]..src/ast_mapper_class.mli[20,772+43])
+                          Ttyp_constr "Parsetree!.class_signature"
+                          []
+                        core_type (src/ast_mapper_class.mli[20,772+47]..src/ast_mapper_class.mli[20,772+62])
+                          Ttyp_constr "Parsetree!.class_signature"
+                          []
+                class_type_field (src/ast_mapper_class.mli[21,835+4]..src/ast_mapper_class.mli[21,835+62])
+                  Tctf_method "class_structure" Public Concrete
+                    core_type (src/ast_mapper_class.mli[21,835+4]..src/ast_mapper_class.mli[21,835+62])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[21,835+28]..src/ast_mapper_class.mli[21,835+62])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[21,835+28]..src/ast_mapper_class.mli[21,835+43])
+                          Ttyp_constr "Parsetree!.class_structure"
+                          []
+                        core_type (src/ast_mapper_class.mli[21,835+47]..src/ast_mapper_class.mli[21,835+62])
+                          Ttyp_constr "Parsetree!.class_structure"
+                          []
+                class_type_field (src/ast_mapper_class.mli[22,898+4]..src/ast_mapper_class.mli[22,898+47])
+                  Tctf_method "class_type" Public Concrete
+                    core_type (src/ast_mapper_class.mli[22,898+4]..src/ast_mapper_class.mli[22,898+47])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[22,898+23]..src/ast_mapper_class.mli[22,898+47])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[22,898+23]..src/ast_mapper_class.mli[22,898+33])
+                          Ttyp_constr "Parsetree!.class_type"
+                          []
+                        core_type (src/ast_mapper_class.mli[22,898+37]..src/ast_mapper_class.mli[22,898+47])
+                          Ttyp_constr "Parsetree!.class_type"
+                          []
+                class_type_field (src/ast_mapper_class.mli[23,946+4]..src/ast_mapper_class.mli[23,946+83])
+                  Tctf_method "class_type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[23,946+4]..src/ast_mapper_class.mli[23,946+83])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[23,946+35]..src/ast_mapper_class.mli[23,946+83])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[23,946+35]..src/ast_mapper_class.mli[23,946+57])
+                          Ttyp_constr "Parsetree!.class_type_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[23,946+61]..src/ast_mapper_class.mli[23,946+83])
+                          Ttyp_constr "Parsetree!.class_type_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[24,1030+4]..src/ast_mapper_class.mli[24,1030+65])
+                  Tctf_method "class_type_field" Public Concrete
+                    core_type (src/ast_mapper_class.mli[24,1030+4]..src/ast_mapper_class.mli[24,1030+65])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[24,1030+29]..src/ast_mapper_class.mli[24,1030+65])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[24,1030+29]..src/ast_mapper_class.mli[24,1030+45])
+                          Ttyp_constr "Parsetree!.class_type_field"
+                          []
+                        core_type (src/ast_mapper_class.mli[24,1030+49]..src/ast_mapper_class.mli[24,1030+65])
+                          Ttyp_constr "Parsetree!.class_type_field"
+                          []
+                class_type_field (src/ast_mapper_class.mli[28,1133+4]..src/ast_mapper_class.mli[28,1133+80])
+                  Tctf_method "constructor_arguments" Public Concrete
+                    core_type (src/ast_mapper_class.mli[28,1133+4]..src/ast_mapper_class.mli[28,1133+80])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[28,1133+34]..src/ast_mapper_class.mli[28,1133+80])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[28,1133+34]..src/ast_mapper_class.mli[28,1133+55])
+                          Ttyp_constr "Parsetree!.constructor_arguments"
+                          []
+                        core_type (src/ast_mapper_class.mli[28,1133+59]..src/ast_mapper_class.mli[28,1133+80])
+                          Ttyp_constr "Parsetree!.constructor_arguments"
+                          []
+                class_type_field (src/ast_mapper_class.mli[29,1214+4]..src/ast_mapper_class.mli[29,1214+86])
+                  Tctf_method "constructor_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[29,1214+4]..src/ast_mapper_class.mli[29,1214+86])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[29,1214+36]..src/ast_mapper_class.mli[29,1214+86])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[29,1214+36]..src/ast_mapper_class.mli[29,1214+59])
+                          Ttyp_constr "Parsetree!.constructor_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[29,1214+63]..src/ast_mapper_class.mli[29,1214+86])
+                          Ttyp_constr "Parsetree!.constructor_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[30,1301+4]..src/ast_mapper_class.mli[30,1301+41])
+                  Tctf_method "expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[30,1301+4]..src/ast_mapper_class.mli[30,1301+41])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[30,1301+17]..src/ast_mapper_class.mli[30,1301+41])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[30,1301+17]..src/ast_mapper_class.mli[30,1301+27])
+                          Ttyp_constr "Parsetree!.expression"
+                          []
+                        core_type (src/ast_mapper_class.mli[30,1301+31]..src/ast_mapper_class.mli[30,1301+41])
+                          Ttyp_constr "Parsetree!.expression"
+                          []
+                class_type_field (src/ast_mapper_class.mli[31,1343+4]..src/ast_mapper_class.mli[31,1343+44])
+                  Tctf_method "extension" Public Concrete
+                    core_type (src/ast_mapper_class.mli[31,1343+4]..src/ast_mapper_class.mli[31,1343+44])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[31,1343+22]..src/ast_mapper_class.mli[31,1343+44])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[31,1343+22]..src/ast_mapper_class.mli[31,1343+31])
+                          Ttyp_constr "Parsetree!.extension"
+                          []
+                        core_type (src/ast_mapper_class.mli[31,1343+35]..src/ast_mapper_class.mli[31,1343+44])
+                          Ttyp_constr "Parsetree!.extension"
+                          []
+                class_type_field (src/ast_mapper_class.mli[32,1388+4]..src/ast_mapper_class.mli[32,1388+80])
+                  Tctf_method "extension_constructor" Public Concrete
+                    core_type (src/ast_mapper_class.mli[32,1388+4]..src/ast_mapper_class.mli[32,1388+80])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[32,1388+34]..src/ast_mapper_class.mli[32,1388+80])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[32,1388+34]..src/ast_mapper_class.mli[32,1388+55])
+                          Ttyp_constr "Parsetree!.extension_constructor"
+                          []
+                        core_type (src/ast_mapper_class.mli[32,1388+59]..src/ast_mapper_class.mli[32,1388+80])
+                          Ttyp_constr "Parsetree!.extension_constructor"
+                          []
+                class_type_field (src/ast_mapper_class.mli[33,1469+4]..src/ast_mapper_class.mli[33,1469+74])
+                  Tctf_method "include_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[33,1469+4]..src/ast_mapper_class.mli[33,1469+74])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[33,1469+32]..src/ast_mapper_class.mli[33,1469+74])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[33,1469+32]..src/ast_mapper_class.mli[33,1469+51])
+                          Ttyp_constr "Parsetree!.include_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[33,1469+55]..src/ast_mapper_class.mli[33,1469+74])
+                          Ttyp_constr "Parsetree!.include_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[34,1544+4]..src/ast_mapper_class.mli[34,1544+74])
+                  Tctf_method "include_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[34,1544+4]..src/ast_mapper_class.mli[34,1544+74])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[34,1544+32]..src/ast_mapper_class.mli[34,1544+74])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[34,1544+32]..src/ast_mapper_class.mli[34,1544+51])
+                          Ttyp_constr "Parsetree!.include_description"
+                          []
+                        core_type (src/ast_mapper_class.mli[34,1544+55]..src/ast_mapper_class.mli[34,1544+74])
+                          Ttyp_constr "Parsetree!.include_description"
+                          []
+                class_type_field (src/ast_mapper_class.mli[35,1619+4]..src/ast_mapper_class.mli[35,1619+68])
+                  Tctf_method "label_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[35,1619+4]..src/ast_mapper_class.mli[35,1619+68])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[35,1619+30]..src/ast_mapper_class.mli[35,1619+68])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[35,1619+30]..src/ast_mapper_class.mli[35,1619+47])
+                          Ttyp_constr "Parsetree!.label_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[35,1619+51]..src/ast_mapper_class.mli[35,1619+68])
+                          Ttyp_constr "Parsetree!.label_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[36,1688+4]..src/ast_mapper_class.mli[36,1688+45])
+                  Tctf_method "location" Public Concrete
+                    core_type (src/ast_mapper_class.mli[36,1688+4]..src/ast_mapper_class.mli[36,1688+45])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[36,1688+21]..src/ast_mapper_class.mli[36,1688+45])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[36,1688+21]..src/ast_mapper_class.mli[36,1688+31])
+                          Ttyp_constr "Location!.t"
+                          []
+                        core_type (src/ast_mapper_class.mli[36,1688+35]..src/ast_mapper_class.mli[36,1688+45])
+                          Ttyp_constr "Location!.t"
+                          []
+                class_type_field (src/ast_mapper_class.mli[37,1734+4]..src/ast_mapper_class.mli[37,1734+59])
+                  Tctf_method "module_binding" Public Concrete
+                    core_type (src/ast_mapper_class.mli[37,1734+4]..src/ast_mapper_class.mli[37,1734+59])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[37,1734+27]..src/ast_mapper_class.mli[37,1734+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[37,1734+27]..src/ast_mapper_class.mli[37,1734+41])
+                          Ttyp_constr "Parsetree!.module_binding"
+                          []
+                        core_type (src/ast_mapper_class.mli[37,1734+45]..src/ast_mapper_class.mli[37,1734+59])
+                          Ttyp_constr "Parsetree!.module_binding"
+                          []
+                class_type_field (src/ast_mapper_class.mli[38,1794+4]..src/ast_mapper_class.mli[38,1794+71])
+                  Tctf_method "module_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[38,1794+4]..src/ast_mapper_class.mli[38,1794+71])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[38,1794+31]..src/ast_mapper_class.mli[38,1794+71])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[38,1794+31]..src/ast_mapper_class.mli[38,1794+49])
+                          Ttyp_constr "Parsetree!.module_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[38,1794+53]..src/ast_mapper_class.mli[38,1794+71])
+                          Ttyp_constr "Parsetree!.module_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[39,1866+4]..src/ast_mapper_class.mli[39,1866+74])
+                  Tctf_method "module_substitution" Public Concrete
+                    core_type (src/ast_mapper_class.mli[39,1866+4]..src/ast_mapper_class.mli[39,1866+74])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[39,1866+32]..src/ast_mapper_class.mli[39,1866+74])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[39,1866+32]..src/ast_mapper_class.mli[39,1866+51])
+                          Ttyp_constr "Parsetree!.module_substitution"
+                          []
+                        core_type (src/ast_mapper_class.mli[39,1866+55]..src/ast_mapper_class.mli[39,1866+74])
+                          Ttyp_constr "Parsetree!.module_substitution"
+                          []
+                class_type_field (src/ast_mapper_class.mli[40,1941+4]..src/ast_mapper_class.mli[40,1941+50])
+                  Tctf_method "module_expr" Public Concrete
+                    core_type (src/ast_mapper_class.mli[40,1941+4]..src/ast_mapper_class.mli[40,1941+50])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[40,1941+24]..src/ast_mapper_class.mli[40,1941+50])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[40,1941+24]..src/ast_mapper_class.mli[40,1941+35])
+                          Ttyp_constr "Parsetree!.module_expr"
+                          []
+                        core_type (src/ast_mapper_class.mli[40,1941+39]..src/ast_mapper_class.mli[40,1941+50])
+                          Ttyp_constr "Parsetree!.module_expr"
+                          []
+                class_type_field (src/ast_mapper_class.mli[41,1992+4]..src/ast_mapper_class.mli[41,1992+50])
+                  Tctf_method "module_type" Public Concrete
+                    core_type (src/ast_mapper_class.mli[41,1992+4]..src/ast_mapper_class.mli[41,1992+50])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[41,1992+24]..src/ast_mapper_class.mli[41,1992+50])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[41,1992+24]..src/ast_mapper_class.mli[41,1992+35])
+                          Ttyp_constr "Parsetree!.module_type"
+                          []
+                        core_type (src/ast_mapper_class.mli[41,1992+39]..src/ast_mapper_class.mli[41,1992+50])
+                          Ttyp_constr "Parsetree!.module_type"
+                          []
+                class_type_field (src/ast_mapper_class.mli[42,2043+4]..src/ast_mapper_class.mli[42,2043+86])
+                  Tctf_method "module_type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[42,2043+4]..src/ast_mapper_class.mli[42,2043+86])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[42,2043+36]..src/ast_mapper_class.mli[42,2043+86])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[42,2043+36]..src/ast_mapper_class.mli[42,2043+59])
+                          Ttyp_constr "Parsetree!.module_type_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[42,2043+63]..src/ast_mapper_class.mli[42,2043+86])
+                          Ttyp_constr "Parsetree!.module_type_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[43,2130+4]..src/ast_mapper_class.mli[43,2130+65])
+                  Tctf_method "open_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[43,2130+4]..src/ast_mapper_class.mli[43,2130+65])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[43,2130+29]..src/ast_mapper_class.mli[43,2130+65])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[43,2130+29]..src/ast_mapper_class.mli[43,2130+45])
+                          Ttyp_constr "Parsetree!.open_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[43,2130+49]..src/ast_mapper_class.mli[43,2130+65])
+                          Ttyp_constr "Parsetree!.open_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[44,2196+4]..src/ast_mapper_class.mli[44,2196+65])
+                  Tctf_method "open_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[44,2196+4]..src/ast_mapper_class.mli[44,2196+65])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[44,2196+29]..src/ast_mapper_class.mli[44,2196+65])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[44,2196+29]..src/ast_mapper_class.mli[44,2196+45])
+                          Ttyp_constr "Parsetree!.open_description"
+                          []
+                        core_type (src/ast_mapper_class.mli[44,2196+49]..src/ast_mapper_class.mli[44,2196+65])
+                          Ttyp_constr "Parsetree!.open_description"
+                          []
+                class_type_field (src/ast_mapper_class.mli[45,2262+4]..src/ast_mapper_class.mli[45,2262+34])
+                  Tctf_method "pat" Public Concrete
+                    core_type (src/ast_mapper_class.mli[45,2262+4]..src/ast_mapper_class.mli[45,2262+34])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[45,2262+16]..src/ast_mapper_class.mli[45,2262+34])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[45,2262+16]..src/ast_mapper_class.mli[45,2262+23])
+                          Ttyp_constr "Parsetree!.pattern"
+                          []
+                        core_type (src/ast_mapper_class.mli[45,2262+27]..src/ast_mapper_class.mli[45,2262+34])
+                          Ttyp_constr "Parsetree!.pattern"
+                          []
+                class_type_field (src/ast_mapper_class.mli[46,2297+4]..src/ast_mapper_class.mli[46,2297+38])
+                  Tctf_method "payload" Public Concrete
+                    core_type (src/ast_mapper_class.mli[46,2297+4]..src/ast_mapper_class.mli[46,2297+38])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[46,2297+20]..src/ast_mapper_class.mli[46,2297+38])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[46,2297+20]..src/ast_mapper_class.mli[46,2297+27])
+                          Ttyp_constr "Parsetree!.payload"
+                          []
+                        core_type (src/ast_mapper_class.mli[46,2297+31]..src/ast_mapper_class.mli[46,2297+38])
+                          Ttyp_constr "Parsetree!.payload"
+                          []
+                class_type_field (src/ast_mapper_class.mli[47,2336+4]..src/ast_mapper_class.mli[47,2336+44])
+                  Tctf_method "signature" Public Concrete
+                    core_type (src/ast_mapper_class.mli[47,2336+4]..src/ast_mapper_class.mli[47,2336+44])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[47,2336+22]..src/ast_mapper_class.mli[47,2336+44])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[47,2336+22]..src/ast_mapper_class.mli[47,2336+31])
+                          Ttyp_constr "Parsetree!.signature"
+                          []
+                        core_type (src/ast_mapper_class.mli[47,2336+35]..src/ast_mapper_class.mli[47,2336+44])
+                          Ttyp_constr "Parsetree!.signature"
+                          []
+                class_type_field (src/ast_mapper_class.mli[48,2381+4]..src/ast_mapper_class.mli[48,2381+59])
+                  Tctf_method "signature_item" Public Concrete
+                    core_type (src/ast_mapper_class.mli[48,2381+4]..src/ast_mapper_class.mli[48,2381+59])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[48,2381+27]..src/ast_mapper_class.mli[48,2381+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[48,2381+27]..src/ast_mapper_class.mli[48,2381+41])
+                          Ttyp_constr "Parsetree!.signature_item"
+                          []
+                        core_type (src/ast_mapper_class.mli[48,2381+45]..src/ast_mapper_class.mli[48,2381+59])
+                          Ttyp_constr "Parsetree!.signature_item"
+                          []
+                class_type_field (src/ast_mapper_class.mli[49,2441+4]..src/ast_mapper_class.mli[49,2441+44])
+                  Tctf_method "structure" Public Concrete
+                    core_type (src/ast_mapper_class.mli[49,2441+4]..src/ast_mapper_class.mli[49,2441+44])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[49,2441+22]..src/ast_mapper_class.mli[49,2441+44])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[49,2441+22]..src/ast_mapper_class.mli[49,2441+31])
+                          Ttyp_constr "Parsetree!.structure"
+                          []
+                        core_type (src/ast_mapper_class.mli[49,2441+35]..src/ast_mapper_class.mli[49,2441+44])
+                          Ttyp_constr "Parsetree!.structure"
+                          []
+                class_type_field (src/ast_mapper_class.mli[50,2486+4]..src/ast_mapper_class.mli[50,2486+59])
+                  Tctf_method "structure_item" Public Concrete
+                    core_type (src/ast_mapper_class.mli[50,2486+4]..src/ast_mapper_class.mli[50,2486+59])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[50,2486+27]..src/ast_mapper_class.mli[50,2486+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[50,2486+27]..src/ast_mapper_class.mli[50,2486+41])
+                          Ttyp_constr "Parsetree!.structure_item"
+                          []
+                        core_type (src/ast_mapper_class.mli[50,2486+45]..src/ast_mapper_class.mli[50,2486+59])
+                          Ttyp_constr "Parsetree!.structure_item"
+                          []
+                class_type_field (src/ast_mapper_class.mli[51,2546+4]..src/ast_mapper_class.mli[51,2546+38])
+                  Tctf_method "typ" Public Concrete
+                    core_type (src/ast_mapper_class.mli[51,2546+4]..src/ast_mapper_class.mli[51,2546+38])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[51,2546+16]..src/ast_mapper_class.mli[51,2546+38])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[51,2546+16]..src/ast_mapper_class.mli[51,2546+25])
+                          Ttyp_constr "Parsetree!.core_type"
+                          []
+                        core_type (src/ast_mapper_class.mli[51,2546+29]..src/ast_mapper_class.mli[51,2546+38])
+                          Ttyp_constr "Parsetree!.core_type"
+                          []
+                class_type_field (src/ast_mapper_class.mli[52,2585+4]..src/ast_mapper_class.mli[52,2585+65])
+                  Tctf_method "type_declaration" Public Concrete
+                    core_type (src/ast_mapper_class.mli[52,2585+4]..src/ast_mapper_class.mli[52,2585+65])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[52,2585+29]..src/ast_mapper_class.mli[52,2585+65])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[52,2585+29]..src/ast_mapper_class.mli[52,2585+45])
+                          Ttyp_constr "Parsetree!.type_declaration"
+                          []
+                        core_type (src/ast_mapper_class.mli[52,2585+49]..src/ast_mapper_class.mli[52,2585+65])
+                          Ttyp_constr "Parsetree!.type_declaration"
+                          []
+                class_type_field (src/ast_mapper_class.mli[53,2651+4]..src/ast_mapper_class.mli[53,2651+59])
+                  Tctf_method "type_exception" Public Concrete
+                    core_type (src/ast_mapper_class.mli[53,2651+4]..src/ast_mapper_class.mli[53,2651+59])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[53,2651+27]..src/ast_mapper_class.mli[53,2651+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[53,2651+27]..src/ast_mapper_class.mli[53,2651+41])
+                          Ttyp_constr "Parsetree!.type_exception"
+                          []
+                        core_type (src/ast_mapper_class.mli[53,2651+45]..src/ast_mapper_class.mli[53,2651+59])
+                          Ttyp_constr "Parsetree!.type_exception"
+                          []
+                class_type_field (src/ast_mapper_class.mli[54,2711+4]..src/ast_mapper_class.mli[54,2711+59])
+                  Tctf_method "type_extension" Public Concrete
+                    core_type (src/ast_mapper_class.mli[54,2711+4]..src/ast_mapper_class.mli[54,2711+59])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[54,2711+27]..src/ast_mapper_class.mli[54,2711+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[54,2711+27]..src/ast_mapper_class.mli[54,2711+41])
+                          Ttyp_constr "Parsetree!.type_extension"
+                          []
+                        core_type (src/ast_mapper_class.mli[54,2711+45]..src/ast_mapper_class.mli[54,2711+59])
+                          Ttyp_constr "Parsetree!.type_extension"
+                          []
+                class_type_field (src/ast_mapper_class.mli[55,2771+4]..src/ast_mapper_class.mli[55,2771+44])
+                  Tctf_method "type_kind" Public Concrete
+                    core_type (src/ast_mapper_class.mli[55,2771+4]..src/ast_mapper_class.mli[55,2771+44])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[55,2771+22]..src/ast_mapper_class.mli[55,2771+44])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[55,2771+22]..src/ast_mapper_class.mli[55,2771+31])
+                          Ttyp_constr "Parsetree!.type_kind"
+                          []
+                        core_type (src/ast_mapper_class.mli[55,2771+35]..src/ast_mapper_class.mli[55,2771+44])
+                          Ttyp_constr "Parsetree!.type_kind"
+                          []
+                class_type_field (src/ast_mapper_class.mli[56,2816+4]..src/ast_mapper_class.mli[56,2816+56])
+                  Tctf_method "value_binding" Public Concrete
+                    core_type (src/ast_mapper_class.mli[56,2816+4]..src/ast_mapper_class.mli[56,2816+56])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[56,2816+26]..src/ast_mapper_class.mli[56,2816+56])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[56,2816+26]..src/ast_mapper_class.mli[56,2816+39])
+                          Ttyp_constr "Parsetree!.value_binding"
+                          []
+                        core_type (src/ast_mapper_class.mli[56,2816+43]..src/ast_mapper_class.mli[56,2816+56])
+                          Ttyp_constr "Parsetree!.value_binding"
+                          []
+                class_type_field (src/ast_mapper_class.mli[57,2873+4]..src/ast_mapper_class.mli[57,2873+68])
+                  Tctf_method "value_description" Public Concrete
+                    core_type (src/ast_mapper_class.mli[57,2873+4]..src/ast_mapper_class.mli[57,2873+68])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[57,2873+30]..src/ast_mapper_class.mli[57,2873+68])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[57,2873+30]..src/ast_mapper_class.mli[57,2873+47])
+                          Ttyp_constr "Parsetree!.value_description"
+                          []
+                        core_type (src/ast_mapper_class.mli[57,2873+51]..src/ast_mapper_class.mli[57,2873+68])
+                          Ttyp_constr "Parsetree!.value_description"
+                          []
+                class_type_field (src/ast_mapper_class.mli[58,2942+4]..src/ast_mapper_class.mli[58,2942+62])
+                  Tctf_method "with_constraint" Public Concrete
+                    core_type (src/ast_mapper_class.mli[58,2942+4]..src/ast_mapper_class.mli[58,2942+62])
+                      Ttyp_poly
+                      core_type (src/ast_mapper_class.mli[58,2942+28]..src/ast_mapper_class.mli[58,2942+62])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/ast_mapper_class.mli[58,2942+28]..src/ast_mapper_class.mli[58,2942+43])
+                          Ttyp_constr "Parsetree!.with_constraint"
+                          []
+                        core_type (src/ast_mapper_class.mli[58,2942+47]..src/ast_mapper_class.mli[58,2942+62])
+                          Ttyp_constr "Parsetree!.with_constraint"
+                          []
+              ]
+    ]
+  signature_item (src/ast_mapper_class.mli[61,3012+0]..src/ast_mapper_class.mli[61,3012+43])
+    Tsig_value
+    value_description to_mapper/211 (src/ast_mapper_class.mli[61,3012+0]..src/ast_mapper_class.mli[61,3012+43])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/ast_mapper_class.mli[62,3056+0]..[63,3114+28])
+            Pstr_eval
+            expression (src/ast_mapper_class.mli[62,3056+0]..[63,3114+28])
+              Pexp_constant PConst_string(" The resulting mapper is \"closed\", i.e. methods ignore\n    their first argument. ",None)
+        ]
+      core_type (src/ast_mapper_class.mli[61,3012+15]..src/ast_mapper_class.mli[61,3012+43])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/ast_mapper_class.mli[61,3012+15]..src/ast_mapper_class.mli[61,3012+22])
+          Ttyp_class "#mapper/152"
+          []
+        core_type (src/ast_mapper_class.mli[61,3012+26]..src/ast_mapper_class.mli[61,3012+43])
+          Ttyp_constr "Ast_mapper!.mapper"
+          []
+      []
+]
+
